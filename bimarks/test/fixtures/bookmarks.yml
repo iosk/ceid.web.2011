@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  URL: MyString
+  bm_id: 1
+  owner: MyString
+  date: 2011-05-11
+
+two:
+  title: MyString
+  URL: MyString
+  bm_id: 1
+  owner: MyString
+  date: 2011-05-11
