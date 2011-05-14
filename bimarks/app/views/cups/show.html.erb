@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Size:</b>
+  <%= @cup.size %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @cup.colour %>
+</p>
+
+
+<%= link_to 'Edit', edit_cup_path(@cup) %> |
+<%= link_to 'Back', cups_path %>
