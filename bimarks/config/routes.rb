@@ -1,4 +1,8 @@
 Bimarks::Application.routes.draw do
+  resources :cups
+
+  resources :bookmarks
+
   resources :users
 
   get "home/index"

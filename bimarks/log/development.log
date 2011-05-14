@@ -199,3 +199,2092 @@ Started GET "/" for 127.0.0.1 at Wed May 11 20:46:18 +0300 2011
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (188.6ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (177.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (302.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (64.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110511165946')[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+  [1m[35mSQL (0.6ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/" for 127.0.0.1 at Wed May 11 21:03:36 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 21:03:39 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:03:41 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:05:21 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (151.6ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (289.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+  [1m[35mSQL (181.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (54.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511174603')[0m
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (585.9ms)[0m  CREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (165.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511175811')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (189.6ms)[0m  CREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (156.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (165.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (289.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (54.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110511175811')[0m
+  [1m[35mSQL (77.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110511174603')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:09:07 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:09:10 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:09:11 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:09:15 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 21:09:18 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:09:21 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:09:57 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:20 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:21 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:22 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:24 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:48 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:49 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:49 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:13:49 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:15:10 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5f24314>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:15:11 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5e9955c>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:15:11 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5e03f98>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:15:22 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:18:19 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5f28234>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:18:20 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5e9d4a4>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:18:20 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5e0a208>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:18:20 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xb5d77994>):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:18:28 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Uer):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:19:30 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:27:28 +0300 2011
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 21:27:32 +0300 2011
+
+ActionController::RoutingError (uninitialized constant UserController):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 21:27:41 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:27:43 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:28:41 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:28:41 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:28:43 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:34:58 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:35:03 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:44:59 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:45:00 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:45:00 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Wed May 11 21:59:09 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant BookmarksController::Bookmark):
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 21:59:13 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:02 +0300 2011
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 22:03:06 +0300 2011
+
+ActionController::RoutingError (uninitialized constant UserController):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 22:03:23 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:27 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:54 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:54 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:55 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:03:55 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:07 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:08 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:08 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:08 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::User):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:32 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:32 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:33 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:33 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:34 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:04:35 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:08:52 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:08:53 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:08:54 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:09:19 +0300 2011
+
+LoadError (Expected /home/ios/geek/ceid/ceid.web.2011/bimarks/app/controllers/users_controller.rb to define UsersController):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:09:37 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:10:16 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:10:16 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:11:28 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:11:29 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:16:17 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:18:58 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:19:01 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:19:04 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/user" for 127.0.0.1 at Wed May 11 22:19:11 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:19:14 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:22:33 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.7ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (187.1ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511192550')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/cups" for 127.0.0.1 at Wed May 11 22:26:06 +0300 2011
+  Processing by CupsController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant CupsController::Cup):
+  app/controllers/cups_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/cups" for 127.0.0.1 at Wed May 11 22:26:54 +0300 2011
+  Processing by CupsController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant CupsController::Cup):
+  app/controllers/cups_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/cups" for 127.0.0.1 at Wed May 11 22:26:55 +0300 2011
+  Processing by CupsController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant CupsController::Cup):
+  app/controllers/cups_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/cups" for 127.0.0.1 at Wed May 11 22:26:57 +0300 2011
+  Processing by CupsController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant CupsController::Cup):
+  app/controllers/cups_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed May 11 22:27:25 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed May 11 22:27:55 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cups" for 127.0.0.1 at Wed May 11 22:28:00 +0300 2011
+  Processing by CupsController#index as HTML
+  [1m[36mCup Load (25.7ms)[0m  [1mSELECT `cups`.* FROM `cups`[0m
+Rendered cups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 143ms (Views: 5.9ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:28:08 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/Users" for 127.0.0.1 at Wed May 11 22:28:20 +0300 2011
+
+ActionController::RoutingError (No route matches "/Users"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/sers" for 127.0.0.1 at Wed May 11 22:28:23 +0300 2011
+
+ActionController::RoutingError (No route matches "/sers"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:28:26 +0300 2011
+  Processing by UsersController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant UsersController::Users):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed May 11 22:31:26 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed May 11 22:31:46 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (83.2ms)
+Rendered users/new.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 103ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Thu May 12 15:57:05 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "user"=>{"username"=>"ios", "password"=>"[FILTERED]", "status"=>"1", "email"=>"ios"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (36.3ms)[0m  INSERT INTO `users` (`email`, `created_at`, `status`, `password`, `username`, `updated_at`) VALUES ('ios', '2011-05-12 12:57:05', 1, 'k', 'ios', '2011-05-12 12:57:05')
+  [1m[36mSQL (80.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 280ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Thu May 12 15:57:05 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 118.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Thu May 12 15:57:16 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "user"=>{"username"=>"adsdssad", "password"=>"[FILTERED]", "status"=>"1", "email"=>"ios"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`updated_at`, `email`, `password`, `username`, `status`, `created_at`) VALUES ('2011-05-12 12:57:16', 'ios', 'k', 'adsdssad', 1, '2011-05-12 12:57:16')[0m
+  [1m[35mSQL (118.6ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 132ms
+
+
+Started GET "/users/2" for 127.0.0.1 at Thu May 12 15:57:16 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 119.8ms)
+
+
+Started GET "/show" for 127.0.0.1 at Thu May 12 15:57:20 +0300 2011
+
+ActionController::RoutingError (No route matches "/show"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/show" for 127.0.0.1 at Thu May 12 15:57:25 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=show):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Thu May 12 16:15:42 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Thu May 12 16:15:43 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Thu May 12 16:15:45 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Thu May 12 16:16:05 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Thu May 12 16:19:51 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (50.2ms)
+Rendered bookmarks/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 61ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Thu May 12 16:19:58 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"sdas", "date(2i)"=>"5", "date(3i)"=>"12", "url"=>"dasd", "q_review"=>"dasdas"}, "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `bookmarks` (`title`, `q_review`, `date`, `updated_at`, `created_at`, `url`) VALUES ('sdas', 'dasdas', '2011-05-12', '2011-05-12 13:19:58', '2011-05-12 13:19:58', 'dasd')
+  [1m[36mSQL (131.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/bookmarks/1
+Completed 302 Found in 145ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Thu May 12 16:19:58 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1
+Rendered bookmarks/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 133.3ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Thu May 12 16:20:01 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Thu May 12 16:20:17 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Thu May 12 16:20:18 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:07:45 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:07:47 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:07:48 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:08:04 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks`
+Rendered bookmarks/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:08:20 +0300 2011
+  Processing by BookmarksController#index as HTML
+Completed   in 3ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/bookmark.rb:2
+  app/controllers/bookmarks_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:10:19 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 45ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmarks/1/edit" for 127.0.0.1 at Fri May 13 23:10:22 +0300 2011
+  Processing by BookmarksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1
+Rendered bookmarks/_form.html.erb (12.5ms)
+Rendered bookmarks/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmarks/1/edit" for 127.0.0.1 at Fri May 13 23:10:39 +0300 2011
+  Processing by BookmarksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1
+Rendered bookmarks/_form.html.erb (20.3ms)
+Rendered bookmarks/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 90ms (Views: 65.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:10:46 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Fri May 13 23:10:49 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (14.5ms)
+Rendered bookmarks/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mBookmark Load (0.5ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:23:08 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 78ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Fri May 13 23:23:10 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1[0m
+Rendered bookmarks/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` LIMIT 1
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mBookmark Load (0.6ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (216.8ms)[0m  CREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "q_review" text, "date" date, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.7ms)[0m  CREATE TABLE "cups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "size" integer, "colour" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "email" varchar(255), "status" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (99.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (99.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110511192550')[0m
+  [1m[35mSQL (110.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110511174603')
+  [1m[36mSQL (110.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110511175811')[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (115.9ms)[0m  DROP TABLE `bookmarks`
+  [1m[36mSQL (155.7ms)[0m  [1mCREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (76.5ms)[0m  [1mDROP TABLE `cups`[0m
+  [1m[35mSQL (145.0ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (76.2ms)[0m  DROP TABLE `users`
+  [1m[36mSQL (144.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Fri May 13 23:35:01 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 65ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Fri May 13 23:35:03 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (17.3ms)
+Rendered bookmarks/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 33ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Fri May 13 23:35:16 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"porn", "date(2i)"=>"5", "date(3i)"=>"13", "url"=>"pornhub.com", "q_review"=>"lets beat it"}, "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  describe `bookmarks`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `bookmarks` (`created_at`, `title`, `q_review`, `date`, `updated_at`, `url`) VALUES ('2011-05-13 20:35:16', 'porn', 'lets beat it', '2011-05-13', '2011-05-13 20:35:16', 'pornhub.com')[0m
+  [1m[35mSQL (116.4ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/bookmarks/1
+Completed 302 Found in 136ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Fri May 13 23:35:16 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1[0m
+Rendered bookmarks/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 59ms (Views: 12.8ms | ActiveRecord: 118.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri May 13 23:35:27 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri May 13 23:35:29 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (59.0ms)
+Rendered users/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri May 13 23:35:34 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "user"=>{"username"=>"ads", "password"=>"[FILTERED]", "status"=>"lkj", "email"=>"salkdj"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`password`, `updated_at`, `status`, `username`, `email`, `created_at`) VALUES ('salkd', '2011-05-13 20:35:34', 0, 'ads', 'salkdj', '2011-05-13 20:35:34')[0m
+  [1m[35mSQL (128.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 143ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:35:34 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 130.0ms)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM schema_migrations
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:48:51 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 69ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:48:52 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:48:54 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:48:55 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.1ms)
+
+
+Started GET "/users/" for 127.0.0.1 at Fri May 13 23:48:59 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/298486374" for 127.0.0.1 at Fri May 13 23:49:03 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 298486374 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri May 13 23:49:06 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 64ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri May 13 23:49:07 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (12.1ms)
+Rendered users/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri May 13 23:49:11 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "user"=>{"username"=>"das", "password"=>"[FILTERED]", "status"=>"s", "email"=>"asd"}}
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`password`, `email`, `username`, `created_at`, `status`, `updated_at`) VALUES ('asd', 'asd', 'das', '2011-05-13 20:49:11', 0, '2011-05-13 20:49:11')[0m
+  [1m[35mSQL (65.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/980190963
+Completed 302 Found in 134ms
+
+
+Started GET "/users/980190963" for 127.0.0.1 at Fri May 13 23:49:11 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 980190963 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 67.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri May 13 23:49:19 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Fri May 13 23:49:37 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks/298486374/edit" for 127.0.0.1 at Fri May 13 23:49:39 +0300 2011
+  Processing by BookmarksController#edit as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[35mBookmark Load (0.4ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 298486374 LIMIT 1
+Rendered bookmarks/_form.html.erb (14.2ms)
+Rendered bookmarks/edit.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/bookmarks/298486374" for 127.0.0.1 at Fri May 13 23:49:48 +0300 2011
+  Processing by BookmarksController#update as HTML
+  Parameters: {"commit"=>"Update Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"MyString", "date(2i)"=>"5", "date(3i)"=>"11", "url"=>"MyString", "q_review"=>"MyText"}, "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "id"=>"298486374"}
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 298486374 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/bookmarks/298486374
+Completed 302 Found in 15ms
+
+
+Started GET "/bookmarks/298486374" for 127.0.0.1 at Fri May 13 23:49:48 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 298486374 LIMIT 1
+Rendered bookmarks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (1.4ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (185.0ms)[0m  CREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (177.0ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (165.6ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `email` varchar(255), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (177.7ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (300.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (75.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110511192550')[0m
+  [1m[35mSQL (77.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110511174603')
+  [1m[36mSQL (77.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110511175811')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+
+
+Started GET "/user" for 127.0.0.1 at Fri May 13 23:50:58 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri May 13 23:51:00 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 73ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri May 13 23:51:02 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (14.4ms)
+Rendered users/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri May 13 23:51:10 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓", "user"=>{"username"=>"fuck", "password"=>"[FILTERED]", "status"=>"ok", "email"=>"shit"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`username`, `created_at`, `password`, `status`, `email`, `updated_at`) VALUES ('fuck', '2011-05-13 20:51:10', 'that', 0, 'shit', '2011-05-13 20:51:10')[0m
+  [1m[35mSQL (96.0ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 116ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri May 13 23:51:10 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 97.6ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Fri May 13 23:51:18 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[35mBookmark Load (0.4ms)[0m  SELECT `bookmarks`.* FROM `bookmarks`
+Rendered bookmarks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Fri May 13 23:51:20 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (62.4ms)
+Rendered bookmarks/new.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Fri May 13 23:51:29 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"ads", "date(2i)"=>"5", "date(3i)"=>"13", "url"=>"asd", "q_review"=>"ads\r\n\r\n"}, "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `bookmarks`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `bookmarks` (`url`, `updated_at`, `created_at`, `date`, `title`, `q_review`) VALUES ('asd', '2011-05-13 20:51:29', '2011-05-13 20:51:29', '2011-05-13', 'ads', 'ads\r\n\r\n')[0m
+  [1m[35mSQL (111.0ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/bookmarks/1
+Completed 302 Found in 126ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Fri May 13 23:51:29 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1[0m
+Rendered bookmarks/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 112.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mBookmark Load (0.4ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+Mysql2::Error: Unknown column 'bookmarks.user_id' in 'where clause': SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (104.6ms)[0m  DROP TABLE `cups`
+  [1m[36mAREL (98.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110511192550'[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (207.0ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (77.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511192550')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (133.3ms)[0m  DROP TABLE `cups`
+  [1m[36mAREL (88.2ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110511192550'[0m
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (99.0ms)[0m  DROP TABLE `bookmarks`
+  [1m[36mAREL (87.7ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110511175811'[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+  [1m[35mSQL (253.1ms)[0m  CREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (76.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511175811')[0m
+Migrating to CreateCups (20110511192550)
+  [1m[35mSQL (176.9ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (77.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110511192550')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `bookmarks`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `cups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `cups`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Fri May 13 23:59:43 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1
+Completed   in 24ms
+
+ActiveRecord::RecordNotFound (Couldn't find Bookmark with ID=1):
+  app/controllers/bookmarks_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Fri May 13 23:59:46 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Fri May 13 23:59:49 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (19.6ms)
+Rendered bookmarks/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Fri May 13 23:59:53 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"sad", "date(2i)"=>"5", "date(3i)"=>"13", "url"=>"sad", "q_review"=>"dasd"}, "authenticity_token"=>"xV8oX4btqTWbYlc91/UpcH4BTuqVL74foIiANODb1Wg=", "utf8"=>"✓"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `bookmarks` (`date`, `user_id`, `created_at`, `title`, `updated_at`, `q_review`, `url`) VALUES ('2011-05-13', NULL, '2011-05-13 20:59:53', 'sad', '2011-05-13 20:59:53', 'dasd', 'sad')
+  [1m[36mSQL (80.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/bookmarks/1
+Completed 302 Found in 102ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at Fri May 13 23:59:53 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 1 LIMIT 1
+Rendered bookmarks/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 82.4ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Fri May 13 23:59:56 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.6ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks`[0m
+Rendered bookmarks/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 59ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat May 14 00:00:01 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 23ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` LIMIT 1
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` LIMIT 1
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE `bookmarks` SET `updated_at` = '2011-05-13 21:05:40', `user_id` = 1 WHERE `bookmarks`.`id` = 1[0m
+  [1m[35mSQL (103.3ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `users` SET `username` = 'ios', `updated_at` = '2011-05-13 21:05:59' WHERE `users`.`id` = 1
+  [1m[36mSQL (101.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m

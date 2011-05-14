@@ -10,14 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110511165946) do
+ActiveRecord::Schema.define(:version => 20110511192550) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "title"
-    t.string   "URL"
-    t.integer  "bm_id"
-    t.string   "owner"
+    t.string   "url"
+    t.text     "q_review"
     t.date     "date"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cups", :force => true do |t|
+    t.integer  "size"
+    t.string   "colour"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
