@@ -2288,3 +2288,107 @@ Completed 200 OK in 23ms (Views: 12.9ms | ActiveRecord: 0.4ms)
   [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
   [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
   [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 1)[0m
+
+
+Started GET "/user" for 127.0.0.1 at Sat May 14 15:43:01 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat May 14 15:43:06 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 204ms (Views: 57.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat May 14 18:15:04 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 84ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat May 14 18:15:10 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sat May 14 18:15:16 +0300 2011
+
+ActionController::RoutingError (No route matches "/about"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at Sat May 14 18:15:22 +0300 2011
+
+ActionController::RoutingError (No route matches "/home/about"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at Sat May 14 18:15:31 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at Sat May 14 18:17:59 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at Sat May 14 18:20:40 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at Sat May 14 18:20:46 +0300 2011
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat May 14 18:20:55 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at Sat May 14 18:25:00 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for 127.0.0.1 at Sat May 14 18:25:10 +0300 2011
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at Sat May 14 18:26:18 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at Sat May 14 18:26:23 +0300 2011
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat May 14 18:26:28 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
