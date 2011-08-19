@@ -5,6 +5,8 @@ Bimarks::Application.routes.draw do
 
   get "pages/about"
 
+  get "pages/help"
+
   resources :cups
 
   resources :bookmarks
