@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110511192550) do
+ActiveRecord::Schema.define(:version => 20110820165927) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "title"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(:version => 20110511192550) do
     t.string   "username"
     t.string   "password"
     t.string   "email"
-    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_admin",   :default => false
   end
 
 end
