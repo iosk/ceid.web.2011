@@ -1,6 +1,6 @@
 .container {
   width: 1000px;
-  height:  700px;
+  height: auto ;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 	background: -ms-linear-gradient(top, #96d0e9, #70cc9a);
 	/* Opera 11.10+ */
 	background: -o-linear-gradient(top, #96d0e9, #70cc9a);
-	/*background: #e2e2e2;*/
+	background: #e2e2e2;
 }
 
 header {
@@ -101,4 +101,15 @@ nav ul li a:hover {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+}
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
 }
