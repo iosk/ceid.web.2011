@@ -5,21 +5,14 @@
   <%= @user.username %>
 </p>
 
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
 
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
 
-<p>
-  <b>is Admin:</b>
-  <%= @user.is_admin %>
-</p>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', root_path %>
