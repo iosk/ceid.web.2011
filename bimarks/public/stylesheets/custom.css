@@ -1,5 +1,6 @@
 .container {
-  width: 710px;
+  width: 1000px;
+  height:  700px;
 }
 
 body {
@@ -94,4 +95,10 @@ nav ul li a:visited {
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
 }

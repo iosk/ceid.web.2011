@@ -1,11 +1,12 @@
 Bimarks::Application.routes.draw do
-  get "pages/home"
+  match '/register',  :to => 'users#new'
 
-  get "pages/contact"
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
 
-  get "pages/about"
 
-  get "pages/help"
+  match '/signup',  :to => 'users#new'
 
 
   resources :cups

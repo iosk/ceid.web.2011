@@ -3520,3 +3520,421 @@ Started GET "/" for 127.0.0.1 at Sat Aug 20 23:34:43 +0300 2011
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:04:41 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:04:45 +0300 2011
+
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/user" for 127.0.0.1 at Sun Aug 21 00:04:49 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:04:51 +0300 2011
+
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/pages/users" for 127.0.0.1 at Sun Aug 21 00:05:02 +0300 2011
+
+ActionController::RoutingError (No route matches "/pages/users"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:06:32 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 42ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:06:45 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:06:46 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 00:06:48 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (12.6ms)
+Rendered users/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 27ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 00:16:39 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (56.7ms)
+Rendered users/new.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 70ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:16:44 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sun Aug 21 00:16:52 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (11.5ms)
+Rendered users/new.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 61ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:17:38 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 00:17:48 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (11.9ms)
+Rendered users/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 00:17:56 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"iadosia", "password"=>"[FILTERED]", "email"=>"aosida"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`updated_at`, `username`, `created_at`, `password`, `is_admin`, `email`) VALUES ('2011-08-20 21:17:56', 'iadosia', '2011-08-20 21:17:56', 'aasodia', 0, 'aosida')[0m
+  [1m[35mSQL (80.0ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/4
+Completed 302 Found in 158ms
+
+
+Started GET "/users/4" for 127.0.0.1 at Sun Aug 21 00:17:56 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 81.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:17:59 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:18:43 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 00:18:50 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.7ms)
+Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 00:18:55 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sad", "password"=>"[FILTERED]", "email"=>"dsa"}}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `users` (`updated_at`, `created_at`, `username`, `is_admin`, `email`, `password`) VALUES ('2011-08-20 21:18:55', '2011-08-20 21:18:55', 'sad', 0, 'dsa', 'sad')
+  [1m[36mSQL (95.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/5
+Completed 302 Found in 110ms
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 00:18:55 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Username:</b>
+    5:   <%= @user.username %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__886554189__621421918_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 00:19:04 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sad", "password"=>"[FILTERED]", "email"=>"dsa"}}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `username`, `email`, `password`, `updated_at`, `is_admin`) VALUES ('2011-08-20 21:19:04', 'sad', 'dsa', 'sad', '2011-08-20 21:19:04', 0)
+  [1m[36mSQL (92.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/6
+Completed 302 Found in 109ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sun Aug 21 00:19:04 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed   in 4ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Username:</b>
+    5:   <%= @user.username %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__886554189__622083078_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:31:22 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (13.2ms)
+Completed   in 23ms
+
+ActionView::Template::Error (Missing partial layouts/stylesheets with {:locale=>[:en, :en], :formats=>[:html], :handlers=>[:erb, :rjs, :rhtml, :builder, :rxml]} in view paths "/home/ios/geek/ceid/ceid.web.2011/bimarks/app/views"):
+    3:   <head>
+    4:     <title><%= title %></title>
+    5:     <%= csrf_meta_tag %>
+    6:     <%= render 'layouts/stylesheets' %>
+    7:   </head>
+    8:   <body>
+    9:     <div class="container">
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__274812721__621269538_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/user" for 127.0.0.1 at Sun Aug 21 00:31:25 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 00:31:27 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (53.6ms)
+Completed   in 62ms
+
+ActionView::Template::Error (Missing partial layouts/stylesheets with {:locale=>[:en, :en], :formats=>[:html], :handlers=>[:erb, :rjs, :rhtml, :builder, :rxml]} in view paths "/home/ios/geek/ceid/ceid.web.2011/bimarks/app/views"):
+    3:   <head>
+    4:     <title><%= title %></title>
+    5:     <%= csrf_meta_tag %>
+    6:     <%= render 'layouts/stylesheets' %>
+    7:   </head>
+    8:   <body>
+    9:     <div class="container">
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__274812721__621883748_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:31:30 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed   in 5ms
+
+ActionView::Template::Error (Missing partial layouts/stylesheets with {:locale=>[:en, :en], :formats=>[:html], :handlers=>[:erb, :rjs, :rhtml, :builder, :rxml]} in view paths "/home/ios/geek/ceid/ceid.web.2011/bimarks/app/views"):
+    3:   <head>
+    4:     <title><%= title %></title>
+    5:     <%= csrf_meta_tag %>
+    6:     <%= render 'layouts/stylesheets' %>
+    7:   </head>
+    8:   <body>
+    9:     <div class="container">
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__274812721__621521728_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:31:45 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:36:53 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Sun Aug 21 00:36:53 +0300 2011
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:45:26 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:45:30 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:46:34 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.6ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:46:36 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.6ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:46:39 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:50:56 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:51:10 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:51:39 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:52:32 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:52:34 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:52:35 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:52:39 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:52:47 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:53:20 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 00:53:30 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
