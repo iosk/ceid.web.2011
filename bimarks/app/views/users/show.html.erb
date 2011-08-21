@@ -1,3 +1,7 @@
+<h1>
+  <%= @user.username %>
+</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,8 +14,20 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
-
+<! This is the sidebar for the profile page of the user !>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= @user.username %>
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @user.username %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+    </td>
+  </tr>
+</table>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
