@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => true
   validates :username, :uniqueness => true
 
+  # We add this one for password validation
+  validates :password, :confirmation => true
+
   # A callback right before saving the user's data
   before_save :encrypt_password
 
