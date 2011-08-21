@@ -6175,3 +6175,80 @@ Rendered layouts/_footer.html.erb (1.2ms)
 Rendered users/new.html.erb within layouts/application (75.8ms)
 Completed 200 OK in 87ms (Views: 79.7ms | ActiveRecord: 0.0ms)
 >>>>>>> f92cf2e637e3ec870f219b6a47b2f38c0f7e15a9
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (314.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+Mysql2::Error: Duplicate entry '' for key 'index_users_on_email': CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (312.2ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+Mysql2::Error: Duplicate entry '' for key 'index_users_on_email': CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (336.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+Mysql2::Error: Duplicate entry '' for key 'index_users_on_email': CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (394.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+Mysql2::Error: Duplicate entry '' for key 'index_users_on_email': CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (345.2ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+Mysql2::Error: Duplicate entry '' for key 'index_users_on_email': CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (398.5ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (353.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_username` ON `users` (`username`)[0m
+  [1m[35mSQL (75.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110821004605')
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  describe `bookmarks`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `bookmarks`[0m
+  [1m[35mSQL (1.0ms)[0m  describe `cups`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `cups`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `users`
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `users`[0m
