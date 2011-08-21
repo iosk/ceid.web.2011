@@ -1,4 +1,6 @@
 Bimarks::Application.routes.draw do
+  get "sessions/new"
+
   match '/register',  :to => 'users#new'
 
   match '/contact', :to => 'pages#contact'
