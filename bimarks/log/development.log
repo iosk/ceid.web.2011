@@ -4542,3 +4542,1225 @@ Rendered layouts/_header.html.erb (1.3ms)
 Rendered layouts/_footer.html.erb (0.8ms)
 Rendered home/index.html.erb within layouts/application (6.2ms)
 Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 01:57:11 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 01:57:15 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 01:57:17 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered home/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Aug 21 01:57:18 +0300 2011
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered pages/about.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 01:57:19 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.9ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 01:57:20 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 02:03:42 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:03:44 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>""}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `is_admin`, `updated_at`, `password`, `username`) VALUES ('2011-08-20 23:03:44', '', 0, '2011-08-20 23:03:44', NULL, NULL)
+  [1m[36mSQL (113.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/7
+Completed 302 Found in 130ms
+
+
+Started GET "/users/7" for 127.0.0.1 at Sun Aug 21 02:03:44 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 115.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:03:47 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 28ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:07:25 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+Completed   in 6ms
+
+NameError (undefined local variable or method `uniqueness' for #<Class:0xb5e16710>):
+  app/models/user.rb:6
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:08:34 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 31ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 02:08:37 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (55.5ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 73ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:08:41 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sad", "password"=>"[FILTERED]", "email"=>""}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Completed   in 51ms
+
+NoMethodError (undefined method `name' for #<User:0xb5efef4c>):
+  app/controllers/users_controller.rb:46:in `create'
+  app/controllers/users_controller.rb:45:in `create'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:09:07 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sad", "password"=>"[FILTERED]", "email"=>""}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (50.7ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 78ms (Views: 62.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:02 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"asdf", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (4.5ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 31ms (Views: 15.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at Sun Aug 21 02:27:09 +0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:27:11 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/index.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:23 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"asdf", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (6.5ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 37ms (Views: 19.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:29 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"asdf", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (4.4ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 30ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:32 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"asdfq", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (5.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 87ms (Views: 16.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:39 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"dsaadsdasdas232131233232", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (4.6ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 37ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:27:43 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"aadsadss21213", "password"=>"[FILTERED]", "email"=>"asd2"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd2') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (4.4ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 30ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:27:47 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 81ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:29:06 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 02:29:10 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.7ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:29:15 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"ios", "password"=>"[FILTERED]", "email"=>"23213123"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '23213123') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `username`, `password`, `updated_at`, `is_admin`) VALUES ('2011-08-20 23:29:15', '23213123', NULL, NULL, '2011-08-20 23:29:15', 0)[0m
+  [1m[35mSQL (139.8ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/8
+Completed 302 Found in 157ms
+
+
+Started GET "/users/8" for 127.0.0.1 at Sun Aug 21 02:29:15 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 80ms (Views: 71.6ms | ActiveRecord: 141.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:29:19 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 02:29:20 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (62.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 80ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:29:28 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"ios", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`updated_at`, `username`, `password`, `email`, `is_admin`, `created_at`) VALUES ('2011-08-20 23:29:28', NULL, NULL, 'asd', 0, '2011-08-20 23:29:28')
+  [1m[36mSQL (155.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/9
+Completed 302 Found in 173ms
+
+
+Started GET "/users/9" for 127.0.0.1 at Sun Aug 21 02:29:28 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 81ms (Views: 69.9ms | ActiveRecord: 157.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at Sun Aug 21 02:29:35 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 29ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at Sun Aug 21 02:29:38 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1
+Rendered users/_form.html.erb (60.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/9" for 127.0.0.1 at Sun Aug 21 02:29:41 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"9", "user"=>{"username"=>"asdsa", "password"=>"[FILTERED]", "email"=>"asd"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (41.6ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') AND (`users`.id <> 9) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` IS NULL) AND (`users`.id <> 9) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (4.7ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 75ms (Views: 15.8ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at Sun Aug 21 02:29:46 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 23ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:29:47 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at Sun Aug 21 02:30:02 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:30:04 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 33ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 02:30:07 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 24ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:30:09 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 83ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at Sun Aug 21 02:30:14 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:30:16 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 83ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 02:30:25 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at Sun Aug 21 02:30:26 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered users/_form.html.erb (61.4ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/5" for 127.0.0.1 at Sun Aug 21 02:30:29 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"5", "user"=>{"username"=>"sadsadadsasddasdas", "password"=>"[FILTERED]", "email"=>"dsa"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'dsa') AND (`users`.id <> 5) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'sad') AND (`users`.id <> 5) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (5.6ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 37ms (Views: 17.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/5" for 127.0.0.1 at Sun Aug 21 02:30:34 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"5", "user"=>{"username"=>"sadsaddasdassd", "password"=>"[FILTERED]", "email"=>"dsa2311212"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'dsa2311212') AND (`users`.id <> 5) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'sad') AND (`users`.id <> 5) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (5.4ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 88ms (Views: 17.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/5" for 127.0.0.1 at Sun Aug 21 02:31:00 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"5", "user"=>{"username"=>"sadsaddasdassd", "password"=>"[FILTERED]", "email"=>"dsa2311212"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `updated_at` = '2011-08-20 23:31:00', `email` = 'dsa2311212' WHERE `users`.`id` = 5
+  [1m[36mSQL (86.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/5
+Completed 302 Found in 101ms
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 02:31:00 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 87.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 02:31:02 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 02:31:10 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.2ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:31:13 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sadadsdasads", "password"=>"[FILTERED]", "email"=>""}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`password`, `username`, `is_admin`, `email`, `updated_at`, `created_at`) VALUES (NULL, NULL, 0, '', '2011-08-20 23:31:13', '2011-08-20 23:31:13')[0m
+  [1m[35mSQL (138.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/10
+Completed 302 Found in 154ms
+
+
+Started GET "/users/10" for 127.0.0.1 at Sun Aug 21 02:31:13 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 25ms (Views: 17.1ms | ActiveRecord: 139.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:31:14 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 02:31:21 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.5ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 30ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:31:27 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"mitsos", "password"=>"[FILTERED]", "email"=>"asd132132"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`username`, `email`, `created_at`, `password`, `is_admin`, `updated_at`) VALUES (NULL, 'asd132132', '2011-08-20 23:31:27', NULL, 0, '2011-08-20 23:31:27')[0m
+  [1m[35mSQL (154.0ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/11
+Completed 302 Found in 169ms
+
+
+Started GET "/users/11" for 127.0.0.1 at Sun Aug 21 02:31:27 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 78ms (Views: 70.9ms | ActiveRecord: 155.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 02:31:31 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 32ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 02:31:35 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (60.8ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 78ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 02:31:41 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"mitsossadasds", "password"=>"[FILTERED]", "email"=>"asdsadsadsad"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `users`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`email`, `updated_at`, `username`, `created_at`, `is_admin`, `password`) VALUES ('asdsadsadsad', '2011-08-20 23:31:41', NULL, '2011-08-20 23:31:41', 0, NULL)[0m
+  [1m[35mSQL (127.2ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/12
+Completed 302 Found in 146ms
+
+
+Started GET "/users/12" for 127.0.0.1 at Sun Aug 21 02:31:41 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (53.8ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 88ms (Views: 79.8ms | ActiveRecord: 130.4ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at Sun Aug 21 03:24:38 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at Sun Aug 21 03:24:40 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+Rendered users/_form.html.erb (59.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 79ms (Views: 72.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/12" for 127.0.0.1 at Sun Aug 21 03:24:43 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"12", "user"=>{"username"=>"asd", "password"=>"[FILTERED]", "email"=>"asdsadsadsad"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/12
+Completed 302 Found in 16ms
+
+
+Started GET "/users/12" for 127.0.0.1 at Sun Aug 21 03:24:43 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:24:46 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 102ms (Views: 38.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 03:24:50 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.8ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (44.9ms)
+Rendered users/new.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 71ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:24:55 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"mmmmmmmmmmmmmmmm"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  describe `users`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`updated_at`, `email`, `password`, `is_admin`, `username`, `created_at`) VALUES ('2011-08-21 00:24:55', 'mmmmmmmmmmmmmmmm', NULL, 0, NULL, '2011-08-21 00:24:55')[0m
+  [1m[35mSQL (125.7ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/13
+Completed 302 Found in 142ms
+
+
+Started GET "/users/13" for 127.0.0.1 at Sun Aug 21 03:24:55 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (5.4ms)
+Rendered users/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 32ms (Views: 21.7ms | ActiveRecord: 127.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:24:57 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 92ms (Views: 86.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 03:25:01 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.8ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:25:08 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"324324324432", "password"=>"[FILTERED]", "email"=>"llllllllll"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `username`, `email`, `updated_at`, `password`, `is_admin`) VALUES ('2011-08-21 00:25:08', NULL, 'llllllllll', '2011-08-21 00:25:08', NULL, 0)[0m
+  [1m[35mSQL (104.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/14
+Completed 302 Found in 171ms
+
+
+Started GET "/users/14" for 127.0.0.1 at Sun Aug 21 03:25:08 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 14 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 25ms (Views: 17.8ms | ActiveRecord: 105.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:25:10 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/index.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 03:25:25 +0300 2011
+  Processing by HomeController#index as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 03:25:30 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (58.3ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/new.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 87ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:25:35 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"asdassd", "password"=>"[FILTERED]", "email"=>"132213312"}}
+WARNING: Can't mass-assign protected attributes: username, password
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`email`, `updated_at`, `password`, `created_at`, `username`, `is_admin`) VALUES ('132213312', '2011-08-21 00:25:35', NULL, '2011-08-21 00:25:35', NULL, 0)
+  [1m[36mSQL (80.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/15
+Completed 302 Found in 115ms
+
+
+Started GET "/users/15" for 127.0.0.1 at Sun Aug 21 03:25:35 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (3.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at Sun Aug 21 03:25:44 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 26ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:25:46 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 35ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 03:25:48 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.6ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 28ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:25:52 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"sadq231323", "password"=>"[FILTERED]", "email"=>"321312"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`password`, `updated_at`, `email`, `created_at`, `is_admin`, `username`) VALUES ('213132', '2011-08-21 00:25:53', '321312', '2011-08-21 00:25:53', 0, 'sadq231323')[0m
+  [1m[35mSQL (135.8ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/16
+Completed 302 Found in 152ms
+
+
+Started GET "/users/16" for 127.0.0.1 at Sun Aug 21 03:25:53 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 77ms (Views: 69.6ms | ActiveRecord: 137.2ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at Sun Aug 21 03:26:04 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/register" for 127.0.0.1 at Sun Aug 21 03:26:06 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (59.3ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 77ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:26:11 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"iso", "password"=>"[FILTERED]", "email"=>"asd"}}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'iso') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (4.5ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 33ms (Views: 15.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:26:14 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"iso", "password"=>"[FILTERED]", "email"=>"asdwqeq"}}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asdwqeq') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'iso') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`is_admin`, `created_at`, `email`, `password`, `username`, `updated_at`) VALUES (0, '2011-08-21 00:26:14', 'asdwqeq', 'asd', 'iso', '2011-08-21 00:26:14')[0m
+  [1m[35mSQL (171.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/17
+Completed 302 Found in 192ms
+
+
+Started GET "/users/17" for 127.0.0.1 at Sun Aug 21 03:26:14 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:26:17 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (43.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/index.html.erb within layouts/application (69.5ms)
+Completed 200 OK in 79ms (Views: 72.8ms | ActiveRecord: 173.2ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at Sun Aug 21 03:26:19 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:26:22 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (52.9ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 90ms (Views: 83.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:33:04 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:33:05 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users`
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 92ms (Views: 86.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Aug 21 03:33:07 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.4ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Aug 21 03:33:11 +0300 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "user"=>{"username"=>"saddsa", "password"=>"[FILTERED]", "email"=>"123123312312"}}
+WARNING: Can't mass-assign protected attributes: password
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '123123312312') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'saddsa') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`is_admin`, `created_at`, `updated_at`, `username`, `email`, `password`) VALUES (0, '2011-08-21 00:33:11', '2011-08-21 00:33:11', 'saddsa', '123123312312', NULL)[0m
+  [1m[35mSQL (103.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/18
+Completed 302 Found in 134ms
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:11 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 105.2ms)
+
+
+Started GET "/users/18/edit" for 127.0.0.1 at Sun Aug 21 03:33:14 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+Rendered users/_form.html.erb (62.7ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 81ms (Views: 74.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:17 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"18", "user"=>{"username"=>"saddsa", "password"=>"[FILTERED]", "email"=>"123123312312"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: password
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '123123312312') AND (`users`.id <> 18) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'saddsa') AND (`users`.id <> 18) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/18
+Completed 302 Found in 19ms
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:17 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/18/edit" for 127.0.0.1 at Sun Aug 21 03:33:20 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+Rendered users/_form.html.erb (11.0ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:24 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"18", "user"=>{"username"=>"saddsa", "password"=>"[FILTERED]", "email"=>"123123312312"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: password
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '123123312312') AND (`users`.id <> 18) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'saddsa') AND (`users`.id <> 18) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/users/18
+Completed 302 Found in 17ms
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:24 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 74ms (Views: 18.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:34 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/18/edit" for 127.0.0.1 at Sun Aug 21 03:33:35 +0300 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+Rendered users/_form.html.erb (13.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 88ms (Views: 79.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:37 +0300 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"yt6jKm+76H3C9u+6UuOTFzjpt/wj758S3YhnTu/mAM0=", "utf8"=>"✓", "id"=>"18", "user"=>{"username"=>"saddsa", "password"=>"[FILTERED]", "email"=>"123123312312"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '123123312312') AND (`users`.id <> 18) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'saddsa') AND (`users`.id <> 18) LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `users` SET `updated_at` = '2011-08-21 00:33:37', `password` = 'adsdsdsadsad' WHERE `users`.`id` = 18
+  [1m[36mSQL (167.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/18
+Completed 302 Found in 187ms
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Aug 21 03:33:38 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 76ms (Views: 67.9ms | ActiveRecord: 169.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 03:33:39 +0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 0.4ms)
