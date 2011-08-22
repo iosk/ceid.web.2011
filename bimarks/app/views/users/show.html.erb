@@ -32,18 +32,18 @@
 </table>
 
 	<table>
-	<caption>Most Recent Submitted Bookmarks</caption>
+	<caption>Most Recently Submitted Bookmarks</caption>
 	  <tr>
 	    <th>Title</th>
 	    <th>Url</th>
-	    <th>user id</th>
+	    <th>Submitted by</th>
 	  </tr>
 
 	<% @my_bookmarks.each do |bookmark| %>
 	 
 	    <td><%= link_to bookmark.title, bookmark %></td>
 	    <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
-	    <td><%= bookmark.user_id %></td>
+	    <td><%= bookmark.user.username %></td>
 	  </tr>
 	<% end %>
 	</table>
