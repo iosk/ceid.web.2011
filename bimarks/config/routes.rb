@@ -6,6 +6,11 @@ Bimarks::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
+  
+  match '/login',  :to => 'sessions#new'
+  match '/logout', :to => 'sessions#destroy'
+
+  
 
  
 
@@ -15,7 +20,8 @@ Bimarks::Application.routes.draw do
   resources :bookmarks
 
   resources :users
-
+  resources :sessions, :only => [:new, :create, :destroy]
+  
   get "home/index"
   get "home/bookmarks"
   # The priority is based upon order of creation:
