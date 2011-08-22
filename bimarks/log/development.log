@@ -20478,3 +20478,1690 @@ WARNING: Can't mass-assign protected attributes: id
   [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 36)[0m
   [1m[35mSQL (0.8ms)[0m  SHOW TABLES
   [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:10:30 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (117.1ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered sessions/new.html.erb within layouts/application (128.1ms)
+Completed 200 OK in 132ms (Views: 131.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:10:36 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 41ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:10:43 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"elvira", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'elvira' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 37ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:10:49 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 38ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:10:59 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 34ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:11:07 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (1.7ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 119ms (Views: 38.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/bookmarks/18" for 127.0.0.1 at Mon Aug 22 23:11:09 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 18 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (72.8ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (88.7ms)
+Completed 200 OK in 101ms (Views: 92.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/14" for 127.0.0.1 at Mon Aug 22 23:11:17 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 14 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (80.9ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 112ms (Views: 102.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookmarks/18" for 127.0.0.1 at Mon Aug 22 23:11:22 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 18 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (72.5ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (89.6ms)
+Completed 200 OK in 103ms (Views: 93.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:11:48 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.7ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (82.3ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered home/index.html.erb within layouts/application (102.2ms)
+Completed 200 OK in 142ms (Views: 105.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Mon Aug 22 23:12:14 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (28.0ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/index.html.erb within layouts/application (115.8ms)
+Completed 200 OK in 128ms (Views: 119.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:12:44 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (27.9ms)
+Rendered layouts/_footer.html.erb (1.8ms)
+Rendered home/index.html.erb within layouts/application (101.7ms)
+Completed 200 OK in 115ms (Views: 105.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:14:58 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (83.1ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered home/index.html.erb within layouts/application (103.3ms)
+Completed 200 OK in 139ms (Views: 106.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:15:01 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+ERROR: compiling _app_views_users_show_html_erb__42401948__621009628_0 RAISED compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="url">bookmark.url</a> ...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _app_views_users_show_html_erb__42401948__621009628_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</h1>
+
+<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Username:</b>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+
+<p>
+  <b>Email:</b>
+  ');@output_buffer.append= ( @user.email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<! This is the sidebar for the profile page of the user !>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </h1>
+    </td>
+    <td class="sidebar round">
+	<strong>Name</strong> ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('<br />
+	<strong>URL</strong>  ');@output_buffer.append= ( link_to user_path(@user), @user );@output_buffer.safe_concat('<br/>
+ 	<strong>Submitted bookmarks</strong> ');@output_buffer.append= ( @my_bookmarks.count );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    </td>
+  </tr>
+</table>
+
+	<table>
+	<caption>Most Recent Submitted Bookmarks</caption>
+	  <tr>
+	    <th>Title</th>
+	    <th>Url</th>
+	    <th>user id</th>
+	  </tr>
+
+');@output_buffer.append_if_string= 	 @my_bookmarks.each do |bookmark| 
+@output_buffer.safe_concat('	 
+	    <td>');@output_buffer.append= ( link_to bookmark.title, bookmark );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( <a href="url">bookmark.url</a> );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( bookmark.user_id );@output_buffer.safe_concat('</td>
+	  </tr>
+');	 end 
+@output_buffer.safe_concat('	</table>
+
+');@output_buffer.append= ( link_to 'Edit', edit_user_path(@user) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', root_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49:in `compile'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/users_controller.rb:19:in `show'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__453433196__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:13:in `run'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed   in 35ms
+
+ActionView::Template::Error (compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="url">bookmark.url</a> ...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+    42: 	<% @my_bookmarks.each do |bookmark| %>
+    43: 	 
+    44: 	    <td><%= link_to bookmark.title, bookmark %></td>
+    45: 	    <td><%= <a href="url">bookmark.url</a> %></td>
+    46: 	    <td><%= bookmark.user_id %></td>
+    47: 	  </tr>
+    48: 	<% end %>
+  app/views/users/show.html.erb:49:in `compile'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (77.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (83.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Aug 22 23:15:04 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:15:04 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 45ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:15:11 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (17.2ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:15:25 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (62.7ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered home/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 91ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:15:29 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (16.2ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:15:38 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+ERROR: compiling _app_views_users_show_html_erb__42401948__621396198_0 RAISED compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="url">bookmark.url</a> ...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _app_views_users_show_html_erb__42401948__621396198_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</h1>
+
+<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Username:</b>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+
+<p>
+  <b>Email:</b>
+  ');@output_buffer.append= ( @user.email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<! This is the sidebar for the profile page of the user !>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </h1>
+    </td>
+    <td class="sidebar round">
+	<strong>Name</strong> ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('<br />
+	<strong>URL</strong>  ');@output_buffer.append= ( link_to user_path(@user), @user );@output_buffer.safe_concat('<br/>
+ 	<strong>Submitted bookmarks</strong> ');@output_buffer.append= ( @my_bookmarks.count );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    </td>
+  </tr>
+</table>
+
+	<table>
+	<caption>Most Recent Submitted Bookmarks</caption>
+	  <tr>
+	    <th>Title</th>
+	    <th>Url</th>
+	    <th>user id</th>
+	  </tr>
+
+');@output_buffer.append_if_string= 	 @my_bookmarks.each do |bookmark| 
+@output_buffer.safe_concat('	 
+	    <td>');@output_buffer.append= ( link_to bookmark.title, bookmark );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( <a href="url">bookmark.url</a> );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( bookmark.user_id );@output_buffer.safe_concat('</td>
+	  </tr>
+');	 end 
+@output_buffer.safe_concat('	</table>
+
+');@output_buffer.append= ( link_to 'Edit', edit_user_path(@user) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', root_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49:in `compile'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/users_controller.rb:19:in `show'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__453433196__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:13:in `run'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed   in 30ms
+
+ActionView::Template::Error (compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="url">bookmark.url</a> ...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+    42: 	<% @my_bookmarks.each do |bookmark| %>
+    43: 	 
+    44: 	    <td><%= link_to bookmark.title, bookmark %></td>
+    45: 	    <td><%= <a href="url">bookmark.url</a> %></td>
+    46: 	    <td><%= bookmark.user_id %></td>
+    47: 	  </tr>
+    48: 	<% end %>
+  app/views/users/show.html.erb:49:in `compile'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (76.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (81.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:17:37 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (16.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:17:39 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (64.8ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:17:44 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"elvira", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'elvira' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 39ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:17:52 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"elvira", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'elvira' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/users/148
+Completed 302 Found in 19ms
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:17:52 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+ERROR: compiling _app_views_users_show_html_erb__42401948__620519238_0 RAISED compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="bookmark.url" target="...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting ')'
+... <a href="bookmark.url" target="_blank">bookmark.url</a> );@...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _app_views_users_show_html_erb__42401948__620519238_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</h1>
+
+<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Username:</b>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+
+<p>
+  <b>Email:</b>
+  ');@output_buffer.append= ( @user.email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<! This is the sidebar for the profile page of the user !>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </h1>
+    </td>
+    <td class="sidebar round">
+	<strong>Name</strong> ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('<br />
+	<strong>URL</strong>  ');@output_buffer.append= ( link_to user_path(@user), @user );@output_buffer.safe_concat('<br/>
+ 	<strong>Submitted bookmarks</strong> ');@output_buffer.append= ( @my_bookmarks.count );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    </td>
+  </tr>
+</table>
+
+	<table>
+	<caption>Most Recent Submitted Bookmarks</caption>
+	  <tr>
+	    <th>Title</th>
+	    <th>Url</th>
+	    <th>user id</th>
+	  </tr>
+
+');@output_buffer.append_if_string= 	 @my_bookmarks.each do |bookmark| 
+@output_buffer.safe_concat('	 
+	    <td>');@output_buffer.append= ( link_to bookmark.title, bookmark );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( <a href="bookmark.url" target="_blank">bookmark.url</a> );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( bookmark.user_id );@output_buffer.safe_concat('</td>
+	  </tr>
+');	 end 
+@output_buffer.safe_concat('	</table>
+
+');@output_buffer.append= ( link_to 'Edit', edit_user_path(@user) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', root_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49:in `compile'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/users_controller.rb:19:in `show'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__453433196__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:13:in `run'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed   in 105ms
+
+ActionView::Template::Error (compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="bookmark.url" target="...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting ')'
+... <a href="bookmark.url" target="_blank">bookmark.url</a> );@...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a> );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+    42: 	<% @my_bookmarks.each do |bookmark| %>
+    43: 	 
+    44: 	    <td><%= link_to bookmark.title, bookmark %></td>
+    45: 	    <td><%= <a href="bookmark.url" target="_blank">bookmark.url</a> %></td>
+    46: 	    <td><%= bookmark.user_id %></td>
+    47: 	  </tr>
+    48: 	<% end %>
+  app/views/users/show.html.erb:49:in `compile'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.8ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:18:15 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 103ms (Views: 78.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:19:06 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 102ms (Views: 78.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:20:42 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+ERROR: compiling _app_views_users_show_html_erb__42401948__621191058_0 RAISED compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="http://www.w3schools.c...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting ')'
+...p://www.w3schools.com/" target="_blank">Visit W3Schools!</a>...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tFID, expecting kDO or '{' or '('
+...rget="_blank">Visit W3Schools!</a>  );@output_buffer.safe_co...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a>  );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+...w3schools.com/" target="_blank">Visit W3Schools!</a> 
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_users_show_html_erb__42401948__621191058_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</h1>
+
+<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Username:</b>
+  ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+
+<p>
+  <b>Email:</b>
+  ');@output_buffer.append= ( @user.email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<! This is the sidebar for the profile page of the user !>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </h1>
+    </td>
+    <td class="sidebar round">
+	<strong>Name</strong> ');@output_buffer.append= ( @user.username );@output_buffer.safe_concat('<br />
+	<strong>URL</strong>  ');@output_buffer.append= ( link_to user_path(@user), @user );@output_buffer.safe_concat('<br/>
+ 	<strong>Submitted bookmarks</strong> ');@output_buffer.append= ( @my_bookmarks.count );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    </td>
+  </tr>
+</table>
+
+	<table>
+	<caption>Most Recent Submitted Bookmarks</caption>
+	  <tr>
+	    <th>Title</th>
+	    <th>Url</th>
+	    <th>user id</th>
+	  </tr>
+
+');@output_buffer.append_if_string= 	 @my_bookmarks.each do |bookmark| 
+@output_buffer.safe_concat('	 
+	    <td>');@output_buffer.append= ( link_to bookmark.title, bookmark );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( <a href="http://www.w3schools.com/" target="_blank">Visit W3Schools!</a>  );@output_buffer.safe_concat('</td>
+	    <td>');@output_buffer.append= ( bookmark.user_id );@output_buffer.safe_concat('</td>
+	  </tr>
+');	 end 
+@output_buffer.safe_concat('	</table>
+
+<a href="http://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+');@output_buffer.append= ( link_to 'Edit', edit_user_path(@user) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', root_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51:in `compile'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/users_controller.rb:19:in `show'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__453433196__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/var/lib/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/handler/webrick.rb:13:in `run'
+/var/lib/gems/1.8/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/var/lib/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed   in 29ms
+
+ActionView::Template::Error (compile error
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected '<'
+...>');@output_buffer.append= ( <a href="http://www.w3schools.c...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting ')'
+...p://www.w3schools.com/" target="_blank">Visit W3Schools!</a>...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: syntax error, unexpected tFID, expecting kDO or '{' or '('
+...rget="_blank">Visit W3Schools!</a>  );@output_buffer.safe_co...
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unknown regexp options - td
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:45: unmatched ): /a>  );@output_buffer.safe_concat('</
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:46: syntax error, unexpected '<'
+	    <td>');@output_buffer.append= (...
+	     ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:47: unknown regexp options - tr
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+...w3schools.com/" target="_blank">Visit W3Schools!</a> 
+                              ^
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: unterminated string meets end of file
+/home/federico/web/ceid.web.2011/bimarks/app/views/users/show.html.erb:51: syntax error, unexpected $end, expecting ')'):
+    42: 	<% @my_bookmarks.each do |bookmark| %>
+    43: 	 
+    44: 	    <td><%= link_to bookmark.title, bookmark %></td>
+    45: 	    <td><%= <a href="http://www.w3schools.com/" target="_blank">Visit W3Schools!</a>  %></td>
+    46: 	    <td><%= bookmark.user_id %></td>
+    47: 	  </tr>
+    48: 	<% end %>
+  app/views/users/show.html.erb:51:in `compile'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.5ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:22:29 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 59ms (Views: 32.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:22:46 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 113ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/test" for 127.0.0.1 at Mon Aug 22 23:22:50 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=test):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:23:17 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 57ms (Views: 31.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/bookmark.title" for 127.0.0.1 at Mon Aug 22 23:23:19 +0300 2011
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"bookmark"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed   in 69ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=bookmark):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:24:07 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 57ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/feqwdwqdqwdqw" for 127.0.0.1 at Mon Aug 22 23:24:09 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"feqwdwqdqwdqw"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=feqwdwqdqwdqw):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:24:27 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 99ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:24:29 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (46.6ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 98ms (Views: 73.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:24:44 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 54ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/gamata" for 127.0.0.1 at Mon Aug 22 23:24:52 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"gamata"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed   in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=gamata):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/users/feqwdwqdqwdqw" for 127.0.0.1 at Mon Aug 22 23:24:57 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"feqwdwqdqwdqw"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=feqwdwqdqwdqw):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Aug 22 23:25:05 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:25:05 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (18.4ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered home/index.html.erb within layouts/application (92.9ms)
+Completed 200 OK in 107ms (Views: 97.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:25:07 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (15.7ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:25:13 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 93ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:25:18 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 35ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:25:26 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (18.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.9ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:25:32 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"kalargaris", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'kalargaris' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/users/149
+Completed 302 Found in 26ms
+
+
+Started GET "/users/149" for 127.0.0.1 at Mon Aug 22 23:25:32 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"149"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 149 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 149)[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 149) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 149 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 61ms (Views: 30.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/149" for 127.0.0.1 at Mon Aug 22 23:25:53 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"149"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 149 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 149)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 149) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 149 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 56ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/swim" for 127.0.0.1 at Mon Aug 22 23:25:57 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"swim"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=swim):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started GET "/users/test" for 127.0.0.1 at Mon Aug 22 23:26:01 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=test):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Aug 22 23:26:05 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:26:05 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (18.8ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered home/index.html.erb within layouts/application (94.8ms)
+Completed 200 OK in 107ms (Views: 98.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at Mon Aug 22 23:26:07 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:26:15 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"elvira", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'elvira' LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 93ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Aug 22 23:26:20 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"elvira", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'elvira' LIMIT 1
+Redirected to http://0.0.0.0:3000/users/148
+Completed 302 Found in 20ms
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:26:20 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 116ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/www.test.com" for 127.0.0.1 at Mon Aug 22 23:26:25 +0300 2011
+
+ActionController::RoutingError (No route matches "/users/www.test.com"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:27:21 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered users/show.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 104ms (Views: 78.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/www.test.com" for 127.0.0.1 at Mon Aug 22 23:27:23 +0300 2011
+
+ActionController::RoutingError (No route matches "/users/www.test.com"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:27:42 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 56ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:28:21 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 58ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/www.test.com" for 127.0.0.1 at Mon Aug 22 23:28:23 +0300 2011
+
+ActionController::RoutingError (No route matches "/users/www.test.com"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:29:15 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 57ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:30:06 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 110ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:31:57 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 110ms (Views: 86.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:36:37 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (2.2ms)
+Rendered users/show.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 111ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/someform.cgi" for 127.0.0.1 at Mon Aug 22 23:36:47 +0300 2011
+
+ActionController::RoutingError (No route matches "/users/someform.cgi"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:37:23 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+Rendered layouts/_header.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered users/show.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 112ms (Views: 87.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 22 23:41:15 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (83.2ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered home/index.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 113ms (Views: 104.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/148" for 127.0.0.1 at Mon Aug 22 23:42:16 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 148)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 148) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 148 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 55ms (Views: 30.5ms | ActiveRecord: 0.4ms)

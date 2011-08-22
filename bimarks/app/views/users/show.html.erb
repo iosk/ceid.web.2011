@@ -41,12 +41,13 @@
 
 	<% @my_bookmarks.each do |bookmark| %>
 	 
-	    <td><%= bookmark.title %></td>
-	    <td><%= bookmark.url %></td>
+	    <td><%= link_to bookmark.title, bookmark %></td>
+	    <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
 	    <td><%= bookmark.user_id %></td>
 	  </tr>
 	<% end %>
 	</table>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', root_path %>
