@@ -29,15 +29,15 @@
   </tr>
 </table>
 
-	<table >
-	<caption>Most Recent</caption>
+	<table>
+	<caption>Most Recent Submitted Bookmarks</caption>
 	  <tr>
 	    <th>Title</th>
 	    <th>Url</th>
 	    <th>user id</th>
 	  </tr>
 
-	<% @user.bookmarks.each do |bookmark| %>
+	<% @my_bookmarks.each do |bookmark| %>
 	  <tr>
 	    <td><%= bookmark.title %></td>
 	    <td><%= bookmark.url %></td>

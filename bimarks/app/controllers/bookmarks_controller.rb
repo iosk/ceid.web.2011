@@ -40,7 +40,7 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.xml
   def create
-    @bookmark = current_user.bookmarks.new(params[:bookmark])
+    @bookmark = current_user.bookmarks.build(params[:bookmark])
 
     respond_to do |format|
       if @bookmark.save

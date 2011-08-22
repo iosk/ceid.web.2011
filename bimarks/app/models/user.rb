@@ -5,7 +5,9 @@ require 'digest'
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  has_many :bookmarks
+
+  # A user has many bookmarks, and when the user is destroyed so are his/her bookmarks
+  has_many :bookmarks, :dependent => :destroy
   attr_accessible :username, :email, :password, :password_confirmation
 
 

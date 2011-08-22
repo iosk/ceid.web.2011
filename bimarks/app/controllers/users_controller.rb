@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @title = @user.username
-#    @my_boomarks = @user.bookmarks 
+    @my_bookmarks = @user.bookmarks
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
