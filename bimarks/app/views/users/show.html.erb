@@ -29,6 +29,22 @@
   </tr>
 </table>
 
+	<table >
+	<caption>Most Recent</caption>
+	  <tr>
+	    <th>Title</th>
+	    <th>Url</th>
+	    <th>user id</th>
+	  </tr>
+
+	<% @user.bookmarks.each do |bookmark| %>
+	  <tr>
+	    <td><%= bookmark.title %></td>
+	    <td><%= bookmark.url %></td>
+	    <td><%= bookmark.user_id %></td>
+	  </tr>
+	<% end %>
+	</table>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', root_path %>
