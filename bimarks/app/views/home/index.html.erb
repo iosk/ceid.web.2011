@@ -1,4 +1,4 @@
-<h1>Home index</h1>
+<h1>biMarks, because even the bookmarks can be bi.</h1>
 <p>fuck you i won't do what you tell me</p>
 revision 1
 
@@ -15,10 +15,11 @@ revision 1
 	    <th>Url</th>
 	  </tr>
 
-	<% @bookmarks.each do |bookmark| %>
+	<% @bookmarks_most_recent.each do |bookmark| %>
 	  <tr>
 	    <td><%=  bookmark.title %></td>
 	    <td><%= bookmark.url %></td>
+		<td><%= bookmark.created_at %></td>
 	  </tr>
 	<% end %>
 	</table>
@@ -31,7 +32,7 @@ revision 1
 	    <th>Url</th>
 	  </tr>
 
-	<% @bookmarks2.each do |bookmark| %>
+	<% @bookmarks_most_rated.each do |bookmark| %>
 	  <tr>
 	    <% if bookmark.title == "porno" %> <td><%= bookmark.title %></td>
 	    <td><%= bookmark.url %></td> <% end %>

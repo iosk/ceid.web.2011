@@ -23,8 +23,10 @@
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.username %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+	<strong>Name</strong> <%= @user.username %><br />
+	<strong>URL</strong>  <%= link_to user_path(@user), @user %><br/>
+ 	<strong>Submitted bookmarks</strong> <%= @my_bookmarks.count %>
+
     </td>
   </tr>
 </table>
@@ -38,7 +40,7 @@
 	  </tr>
 
 	<% @my_bookmarks.each do |bookmark| %>
-	  <tr>
+	 
 	    <td><%= bookmark.title %></td>
 	    <td><%= bookmark.url %></td>
 	    <td><%= bookmark.user_id %></td>
