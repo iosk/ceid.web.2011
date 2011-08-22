@@ -31,10 +31,10 @@ revision 1
 	    <th>Url</th>
 	  </tr>
 
-	<% @bookmarks.each do |bookmark| %>
+	<% @bookmarks2.each do |bookmark| %>
 	  <tr>
-	    <td><%= bookmark.title %></td>
-	    <td><%= bookmark.url %></td>
+	    <% if bookmark.title == "porno" %> <td><%= bookmark.title %></td>
+	    <td><%= bookmark.url %></td> <% end %>
 	  </tr>
 	<% end %>
 	</table>
