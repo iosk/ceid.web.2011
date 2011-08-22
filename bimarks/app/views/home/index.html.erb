@@ -2,9 +2,8 @@
 <p>fuck you i won't do what you tell me</p>
 revision 1
 
-
 <center>
-<table width=500>
+	<table width=500>
 <tr>
 <td>
 
@@ -15,15 +14,11 @@ revision 1
 	    <th>Url</th>
 	  </tr>
 
-	<% @bookmarks_most_recent.each do |bookmark| %>
-	  <tr>
-	    <td><%=  bookmark.title %></td>
-	    <td><%= bookmark.url %></td>
-	    <td><%= bookmark.created_at %></td>
-	  </tr>
-	<% end %>
+	 
+	<%= render @bookmarks_most_recent %>
 	</table>
 </td>
+
 <td>
 	<table >
 	<caption>Favorites</caption>
@@ -32,14 +27,10 @@ revision 1
 	    <th>Url</th>
 	  </tr>
 
-	<% @bookmarks_most_rated.each do |bookmark| %>
-	  <tr>
-	    <% if bookmark.title == "porno" %> <td><%= bookmark.title %></td>
-	    <td><%= bookmark.url %></td> <% end %>
-	  </tr>
-	<% end %>
+	<%= render @bookmarks_most_rated %>
 	</table>
 </td>
+
 </tr>
 </table>
 </center>
