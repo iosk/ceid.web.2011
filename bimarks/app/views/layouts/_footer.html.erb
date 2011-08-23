@@ -2,9 +2,12 @@
 <footer>
   <nav class="round">
     <ul>
+     <% if !signed_in? %>
       <li><%= link_to "Register", register_path %></li>
+     <% end %>
       <li><%= link_to "Contact", contact_path %></li>
       <li><%= link_to "About", about_path %></li>
     </ul>
   </nav>
+
 </footer>
