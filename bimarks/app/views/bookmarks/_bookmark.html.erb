@@ -5,9 +5,9 @@
     <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
     <td><%= bookmark.created_at %></td>
 
-<% if current_user == (bookmark.user) %>
+<% if current_user?(bookmark.user) %>
     <td>
-    <%= link_to "delete", bookmark, :method => :destroy,
+    <%= link_to "Destroy", bookmark, :method => :delete,
                                      :confirm => "Fo' real?",
                                      :title => bookmark.title %>
   </td>
