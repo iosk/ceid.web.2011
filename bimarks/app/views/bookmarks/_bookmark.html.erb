@@ -7,7 +7,7 @@
 
 <% if current_user == (bookmark.user) %>
     <td>
-    <%= link_to "delete", bookmark, :method => :delete,
+    <%= link_to "delete", bookmark, :method => :destroy,
                                      :confirm => "Fo' real?",
                                      :title => bookmark.title %>
   </td>
