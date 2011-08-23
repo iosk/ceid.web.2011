@@ -3,6 +3,8 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.xml
 
   before_filter :authenticate, :only => [:create, :destroy, :new, :edit, :update]
+  before_filter :authorized_user, :only => :destroy
+
 
   def index
     @bookmarks = Bookmark.all
@@ -85,4 +87,9 @@ class BookmarksController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+    def authorized_user
+      @bookmark = current_user.bookmarks.find_by_id(params[:id])
+      redirect_to root_path if @bookmark.nil?
+    end
 end

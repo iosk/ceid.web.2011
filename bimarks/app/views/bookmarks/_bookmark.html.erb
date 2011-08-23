@@ -1,5 +1,16 @@
+<HTML>
+
 <tr class="bookmark">
     <td><%= link_to bookmark.title, bookmark %></td>
     <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
     <td><%= bookmark.created_at %></td>
+
+<% if current_user == (bookmark.user) %>
+    <td>
+    <%= link_to "delete", bookmark, :method => :delete,
+                                     :confirm => "Fo' real?",
+                                     :title => bookmark.title %>
+  </td>
+  <% end %>
+
 </tr>
