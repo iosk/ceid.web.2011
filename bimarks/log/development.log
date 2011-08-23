@@ -22165,3 +22165,729 @@ Rendered layouts/_header.html.erb (3.3ms)
 Rendered layouts/_footer.html.erb (1.2ms)
 Rendered users/show.html.erb within layouts/application (26.9ms)
 Completed 200 OK in 55ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:44:52 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered home/index.html.erb within layouts/application (14.1ms)
+Completed   in 49ms
+
+ActionView::Template::Error (Missing partial bookmarks/bookmark with {:locale=>[:en, :en], :handlers=>[:builder, :erb, :rjs, :rhtml, :rxml], :formats=>[:html]} in view paths "/home/federico/web/ceid.web.2011/bimarks/app/views"):
+    16: 	  </tr>
+    17: 
+    18: 	 
+    19: 	<%= render @bookmarks_most_recent %>
+    20: 	</table>
+    21: </td>
+    22: 
+  app/views/home/index.html.erb:19:in `_app_views_home_index_html_erb__904429998__621811968_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (65.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (71.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:46:17 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered home/index.html.erb within layouts/application (81.2ms)
+Completed   in 116ms
+
+ActionView::Template::Error (Missing partial bookmarks/bookmark with {:locale=>[:en, :en], :handlers=>[:builder, :erb, :rjs, :rhtml, :rxml], :formats=>[:html]} in view paths "/home/federico/web/ceid.web.2011/bimarks/app/views"):
+    20: 	  </tr>
+    21: 
+    22: 	 
+    23: 	<%= render @bookmarks_most_recent %>
+    24: 	</table>
+    25: </td>
+    26: 
+  app/views/home/index.html.erb:23:in `_app_views_home_index_html_erb__904429998__621996288_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:46:26 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed   in 28ms
+
+ActionView::Template::Error (Missing partial bookmarks/bookmark with {:locale=>[:en, :en], :handlers=>[:builder, :erb, :rjs, :rhtml, :rxml], :formats=>[:html]} in view paths "/home/federico/web/ceid.web.2011/bimarks/app/views"):
+    20: 	  </tr>
+    21: 
+    22: 	 
+    23: 	<%= render @bookmarks_most_recent %>
+    24: 	</table>
+    25: </td>
+    26: 
+  app/views/home/index.html.erb:23:in `_app_views_home_index_html_erb__904429998__621713798_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (34.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:46:49 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered home/index.html.erb within layouts/application (81.3ms)
+Completed   in 116ms
+
+ActionView::Template::Error (Missing partial bookmarks/bookmark with {:locale=>[:en, :en], :handlers=>[:builder, :erb, :rjs, :rhtml, :rxml], :formats=>[:html]} in view paths "/home/federico/web/ceid.web.2011/bimarks/app/views"):
+    20: 	  </tr>
+    21: 
+    22: 	 
+    23: 	<%= render @bookmarks_most_recent %>
+    24: 	</table>
+    25: </td>
+    26: 
+  app/views/home/index.html.erb:23:in `_app_views_home_index_html_erb__904429998__621430918_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:46:51 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed   in 28ms
+
+ActionView::Template::Error (Missing partial bookmarks/bookmark with {:locale=>[:en, :en], :handlers=>[:builder, :erb, :rjs, :rhtml, :rxml], :formats=>[:html]} in view paths "/home/federico/web/ceid.web.2011/bimarks/app/views"):
+    20: 	  </tr>
+    21: 
+    22: 	 
+    23: 	<%= render @bookmarks_most_recent %>
+    24: 	</table>
+    25: </td>
+    26: 
+  app/views/home/index.html.erb:23:in `_app_views_home_index_html_erb__904429998__621148128_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:48:28 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (3.0ms)
+Rendered bookmarks/_bookmark.html.erb (2.2ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered home/index.html.erb within layouts/application (94.1ms)
+Completed 200 OK in 129ms (Views: 97.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at Tue Aug 23 01:54:00 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (16.2ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Tue Aug 23 01:54:08 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"matis", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'matis' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/users/153
+Completed 302 Found in 27ms
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 01:54:09 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 109ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at Tue Aug 23 01:54:24 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (75.1ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered bookmarks/index.html.erb within layouts/application (116.8ms)
+Completed 200 OK in 129ms (Views: 120.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Tue Aug 23 01:54:26 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (65.0ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (27.4ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/new.html.erb within layouts/application (101.3ms)
+Completed 200 OK in 113ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Tue Aug 23 01:55:11 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"Μπαλαδορος", "date(2i)"=>"8", "date(3i)"=>"22", "url"=>"www.contra.gr", "q_review"=>"nai eimai pao kai pou den paw!"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: date(1i), date(2i), date(3i)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `bookmarks` (`date`, `q_review`, `created_at`, `url`, `user_id`, `title`, `updated_at`) VALUES (NULL, 'nai eimai pao kai pou den paw!', '2011-08-22 22:55:11', 'www.contra.gr', 153, 'Μπαλαδορος', '2011-08-22 22:55:11')
+  [1m[36mSQL (264.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/bookmarks/21
+Completed 302 Found in 359ms
+
+
+Started GET "/bookmarks/21" for 127.0.0.1 at Tue Aug 23 01:55:12 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 21 ORDER BY bookmarks.created_at DESC LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (77.7ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 107ms (Views: 97.9ms | ActiveRecord: 266.0ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 01:55:15 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)[0m
+  [1m[35mBookmark Load (0.4ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (2.9ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 58ms (Views: 33.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 01:58:27 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.9ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered bookmarks/_bookmark.html.erb (9.7ms)
+Rendered bookmarks/_bookmark.html.erb (2.1ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 59ms (Views: 48.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 01:59:33 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 112ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/21" for 127.0.0.1 at Tue Aug 23 01:59:41 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 21 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (26.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 109ms (Views: 100.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookmarks/21" for 127.0.0.1 at Tue Aug 23 02:05:11 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 21 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (30.8ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (100.1ms)
+Completed 200 OK in 112ms (Views: 103.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks/" for 127.0.0.1 at Tue Aug 23 02:05:23 +0300 2011
+  Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (26.4ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/index.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 141ms (Views: 132.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookmarks/20" for 127.0.0.1 at Tue Aug 23 02:05:30 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 20 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (26.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 117ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 02:05:53 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 115ms (Views: 32.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Tue Aug 23 02:06:00 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (71.7ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (27.1ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/new.html.erb within layouts/application (107.5ms)
+Completed 200 OK in 119ms (Views: 111.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Tue Aug 23 02:06:17 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"γρεγεργ", "date(2i)"=>"8", "date(3i)"=>"22", "url"=>"www.aek.gr", "q_review"=>"fwefwe"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: date(1i), date(2i), date(3i)
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `bookmarks`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `bookmarks` (`url`, `created_at`, `updated_at`, `q_review`, `date`, `title`, `user_id`) VALUES ('www.aek.gr', '2011-08-22 23:06:17', '2011-08-22 23:06:17', 'fwefwe', NULL, 'γρεγεργ', 153)
+  [1m[36mSQL (1.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/bookmarks/22
+Completed 302 Found in 94ms
+
+
+Started GET "/bookmarks/22" for 127.0.0.1 at Tue Aug 23 02:06:17 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 22 ORDER BY bookmarks.created_at DESC LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (85.4ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (101.4ms)
+Completed 200 OK in 114ms (Views: 105.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at Tue Aug 23 02:06:29 +0300 2011
+  Processing by BookmarksController#create as HTML
+  Parameters: {"commit"=>"Create Bookmark", "bookmark"=>{"date(1i)"=>"2011", "title"=>"γρεγεργwqdq", "date(2i)"=>"8", "date(3i)"=>"21", "url"=>"www.aek.gr", "q_review"=>"fwefwedsadad"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+WARNING: Can't mass-assign protected attributes: date(1i), date(2i), date(3i)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  describe `bookmarks`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `bookmarks` (`created_at`, `user_id`, `q_review`, `title`, `updated_at`, `date`, `url`) VALUES ('2011-08-22 23:06:29', 153, 'fwefwedsadad', 'γρεγεργwqdq', '2011-08-22 23:06:29', NULL, 'www.aek.gr')[0m
+  [1m[35mSQL (1.8ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/bookmarks/23
+Completed 302 Found in 41ms
+
+
+Started GET "/bookmarks/23" for 127.0.0.1 at Tue Aug 23 02:06:29 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 23 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (27.2ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered bookmarks/show.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 122ms (Views: 113.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:13:12 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.9ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (3.1ms)
+Rendered bookmarks/_bookmark.html.erb (2.6ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (104.2ms)
+Completed 200 OK in 140ms (Views: 107.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:13:23 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 108ms (Views: 78.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Tue Aug 23 04:13:35 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:13:35 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (10.3ms)
+Rendered bookmarks/_bookmark.html.erb (2.5ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (63.6ms)
+Rendered home/index.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 114ms (Views: 104.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:13:44 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (11.9ms)
+Rendered bookmarks/_bookmark.html.erb (3.0ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered home/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 56ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at Tue Aug 23 04:13:54 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (67.0ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered sessions/new.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Tue Aug 23 04:13:59 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"matis", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'matis' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/users/153
+Completed 302 Found in 24ms
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:13:59 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 113ms (Views: 89.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookmarks/21" for 127.0.0.1 at Tue Aug 23 04:14:11 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 21 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (71.3ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 106ms (Views: 92.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/22" for 127.0.0.1 at Tue Aug 23 04:14:13 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 22 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (79.1ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (95.8ms)
+Completed 200 OK in 111ms (Views: 101.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookmarks/23" for 127.0.0.1 at Tue Aug 23 04:14:15 +0300 2011
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 23 ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (71.4ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/show.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 100ms (Views: 91.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:18:14 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 62ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Tue Aug 23 04:18:16 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (19.0ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (66.0ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered bookmarks/new.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 106ms (Views: 97.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:19:00 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (43.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 107ms (Views: 82.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:20:14 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 58ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:21:31 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered bookmarks/_bookmark.html.erb (24.0ms)
+Rendered bookmarks/_bookmark.html.erb (2.4ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Tue Aug 23 04:21:33 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (18.9ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_header.html.erb (25.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered bookmarks/new.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 116ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Tue Aug 23 04:21:36 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:21:36 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered bookmarks/_bookmark.html.erb (9.3ms)
+Rendered bookmarks/_bookmark.html.erb (2.4ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered home/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at Tue Aug 23 04:22:08 +0300 2011
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (18.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered sessions/new.html.erb within layouts/application (96.3ms)
+Completed 200 OK in 101ms (Views: 100.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Tue Aug 23 04:22:13 +0300 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log In", "session"=>{"username"=>"matis", "password"=>"[FILTERED]"}, "authenticity_token"=>"I97sNWM7GEZ9ukzhNNomSljWQ8HKU+dAZHaGUUPc1wg=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'matis' LIMIT 1
+Redirected to http://0.0.0.0:3000/users/153
+Completed 302 Found in 25ms
+
+
+Started GET "/users/153" for 127.0.0.1 at Tue Aug 23 04:22:13 +0300 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `bookmarks` WHERE (`bookmarks`.user_id = 153)
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 153) ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 114ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:22:16 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (55.4ms)
+Rendered bookmarks/_bookmark.html.erb (2.6ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered home/index.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 108ms (Views: 98.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at Tue Aug 23 04:22:18 +0300 2011
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (17.2ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 153 LIMIT 1[0m
+Rendered layouts/_header.html.erb (86.9ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered bookmarks/new.html.erb within layouts/application (113.3ms)
+Completed 200 OK in 125ms (Views: 117.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Tue Aug 23 04:22:22 +0300 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:22:22 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (82.1ms)
+Rendered bookmarks/_bookmark.html.erb (2.7ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered home/index.html.erb within layouts/application (112.2ms)
+Completed 200 OK in 125ms (Views: 116.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 04:23:49 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered bookmarks/_bookmark.html.erb (10.0ms)
+Rendered bookmarks/_bookmark.html.erb (2.7ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered home/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 0.3ms)
