@@ -22891,6 +22891,39 @@ Rendered layouts/_header.html.erb (2.8ms)
 Rendered layouts/_footer.html.erb (1.2ms)
 Rendered home/index.html.erb within layouts/application (38.7ms)
 Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+<<<<<<< HEAD
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mBookmark Load (0.9ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mBookmark Load (0.7ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 21) ORDER BY bookmarks.created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY users.id DESC LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE (`bookmarks`.user_id = 36) ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 'id' AND (`bookmarks`.user_id = 36) ORDER BY bookmarks.created_at DESC LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` WHERE `bookmarks`.`id` = 'id' AND (`bookmarks`.user_id = 36) ORDER BY bookmarks.created_at DESC LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at ASC LIMIT 1
+  [1m[36mBookmark Load (0.7ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 36 LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mAREL (0.6ms)[0m  [1mDELETE FROM `bookmarks` WHERE `bookmarks`.`id` = 1[0m
+  [1m[35mSQL (186.3ms)[0m  COMMIT
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at ASC LIMIT 1
+=======
 
 
 Started GET "/" for 127.0.0.1 at Tue Aug 23 05:33:29 +0300 2011
@@ -23950,6 +23983,7 @@ Rendered layouts/_header.html.erb (2.6ms)
 Rendered layouts/_footer.html.erb (1.7ms)
 Rendered home/index.html.erb within layouts/application (108.8ms)
 Completed 200 OK in 198ms (Views: 112.3ms | ActiveRecord: 1.1ms)
+<<<<<<< HEAD
 
 
 Started GET "/login" for 127.0.0.1 at Tue Aug 23 18:19:32 +0300 2011
@@ -31557,3 +31591,6 @@ Started GET "/rss" for 127.0.0.1 at Tue Aug 23 21:49:47 +0300 2011
   [1m[35mBookmark Load (0.1ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC, created_at DESC LIMIT 15
 Rendered bookmarks/rss.builder (33.1ms)
 Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 0.1ms)
+=======
+>>>>>>> 14aa8295f1835f28e38ec1ea1d0bedda5703898c
+>>>>>>> 198231207058dce478838c5d4a4341cc6f204d3b

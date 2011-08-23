@@ -7,7 +7,8 @@ class BookmarksController < ApplicationController
 
 
   def index
-    @bookmarks = Bookmark.all
+#    @bookmarks = Bookmark.all
+    @users = Bookmark.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
