@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @bookmarks_most_recent = Bookmark.all.first(10)
-    @bookmarks_most_rated = Bookmark.all
+     @bookmarks_most_recent = Bookmark.all.first(10)
+     @bookmarks_most_rated = Bookmark.all
      respond_to do |format|
 
       format.html # index.html.erb
