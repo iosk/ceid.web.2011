@@ -41,13 +41,15 @@
 	    <th>Submitted by</th>
 	  </tr>
 
+	<!-- This code has to be replaced by views/bookmarks/_bookmark.html.erb -->
 	<% @my_bookmarks.each do |bookmark| %>
-	 
+
 	    <td><%= link_to bookmark.title, bookmark %></td>
 	    <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
 	    <td><%= bookmark.user.username %></td>
 	  </tr>
 	<% end %>
+	<!-- The above code should be replaced by views/bookmarks/_bookmark.html.erb -->
 	</table>
 
 
