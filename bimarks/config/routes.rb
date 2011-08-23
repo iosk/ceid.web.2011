@@ -10,11 +10,12 @@ Bimarks::Application.routes.draw do
   match '/login',  :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'
 
+  match '/rss',    :to => 'bookmarks#feed'
   
 
  
 
-
+  
   resources :cups
 
   resources :bookmarks

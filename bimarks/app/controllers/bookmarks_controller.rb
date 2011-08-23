@@ -52,7 +52,7 @@ class BookmarksController < ApplicationController
       flash[:success] = "Bookmark was successfully submitted"
 
         format.html { redirect_to(@bookmark) }
-        format.xml  { render :xml => @bookmark, :status => :created, :location => @bookmark  }
+        format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
@@ -88,6 +88,14 @@ class BookmarksController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+def feed
+   @bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
+    response.headers["Content-Type"] = "application/xml; charset=utf-8"  
+    render :action=>"rss", :layout=>false 
+   
+end
+
 
     def authorized_user
       @bookmark = current_user.bookmarks.find_by_id(params[:id])
