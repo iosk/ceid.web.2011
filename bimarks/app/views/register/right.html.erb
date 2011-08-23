@@ -1,0 +1,7 @@
+<% form_for :user, @test do |f| %>
+  <%= error_messages_for :user %>
+ 
+  Username: <%= f.text_field :username %><br/>
+  Password: <%= f.password_field :password %><br/>
+  <%= submit_tag "Register!"  %>
+<% end %>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<p><table border="1">
+<caption>Most Recent</caption>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th>Q review</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bookmarks.each do |bookmark| %>
+  <tr>
+    <td><%= bookmark.title %></td>
+    <td><%= bookmark.url %></td>
+  </tr>
+<% end %>
+</table>
+
