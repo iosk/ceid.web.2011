@@ -1,4 +1,5 @@
 class Bookmark < ActiveRecord::Base
+  paginates_per 10
   belongs_to :user
   #validates :url
   validates :q_review, :length => { :maximum => 140}
