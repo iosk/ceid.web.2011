@@ -21,6 +21,7 @@ Bimarks::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :bookmarks, :only => [:create, :destroy] 
   
   get "home/index"
   get "home/bookmarks"

@@ -1,6 +1,9 @@
 class BookmarksController < ApplicationController
   # GET /bookmarks
   # GET /bookmarks.xml
+
+  before_filter :authenticate, :only => [:create, :destroy, :new, :edit, :update]
+
   def index
     @bookmarks = Bookmark.all
 
@@ -44,7 +47,9 @@ class BookmarksController < ApplicationController
 
     respond_to do |format|
       if @bookmark.save
-        format.html { redirect_to(@bookmark, :notice => 'Bookmark was successfully created.') }
+      flash[:success] = "Bookmark was successfully submitted"
+
+        format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark, :status => :created, :location => @bookmark  }
       else
         format.html { render :action => "new" }
