@@ -1,9 +1,12 @@
 <HTML>
 
+
+<!-- This is a partial fro creating the short view of bookmarks - for using in lists etc !-->
 <tr class="bookmark">
     <td><%= link_to bookmark.title, bookmark %></td>
     <td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
-    <td><%= bookmark.created_at %></td>
+    <td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
+    <td><%= bookmark.user.username %></td>
 
 <% if current_user?(bookmark.user) %>
     <td>
