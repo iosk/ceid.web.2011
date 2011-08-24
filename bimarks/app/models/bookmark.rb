@@ -6,5 +6,6 @@ class Bookmark < ActiveRecord::Base
   attr_accessible :title, :q_review, :url
 
   default_scope :order => 'bookmarks.created_at DESC'
+  has_many :ratings, :dependent => :destroy
 
 end
