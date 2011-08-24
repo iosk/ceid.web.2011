@@ -2,58 +2,62 @@ class BookmarksController < ApplicationController
   # GET /bookmarks
   # GET /bookmarks.xml
 
-
-
   before_filter :authenticate, :only => [:create, :destroy, :new, :edit, :update]
   before_filter :authorized_user, :only => :destroy
 
-
   def index
 #     @bookmarks = Bookmark.all
-      @bookmarks = Bookmark.page(params[:page]).order("url")
-
-
-      respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @bookmarks }
-    end
+	@bookmarks = Bookmark.page(params[:page]).order("url")
+	respond_to do |format|
+      		format.html # index.html.erb
+		format.xml  { render :xml => @bookmarks }
+    	end
   end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml
   def show
-    @bookmark = Bookmark.find(params[:id])
+	@bookmark = Bookmark.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @bookmark }
-    end
+	if signed_in?
+		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user)
+		unless @current_user_rating 
+			# if current_user has not rated this bookmark yet then create a new rating
+			@current_user_rating = current_user.ratings.new
+		end
+	end
+
+
+    	respond_to do |format|
+      		format.html # show.html.erb
+      		format.xml  { render :xml => @bookmark }
+    	end
   end
 
   # GET /bookmarks/new
   # GET /bookmarks/new.xml
   def new
-    @bookmark = Bookmark.new
+	@bookmark = Bookmark.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @bookmark }
+	respond_to do |format|
+	format.html # new.html.erb
+	format.xml  { render :xml => @bookmark }
     end
   end
 
   # GET /bookmarks/1/edit
   def edit
-    @bookmark = Bookmark.find(params[:id])
+	@bookmark = Bookmark.find(params[:id])
   end
 
   # POST /bookmarks
   # POST /bookmarks.xml
   def create
-    @bookmark = current_user.bookmarks.build(params[:bookmark])
+	@bookmark = current_user.bookmarks.build(params[:bookmark])
 
-    respond_to do |format|
-      if @bookmark.save
-      flash[:success] = "Bookmark was successfully submitted"
+	respond_to do |format|
+	if @bookmark.save
+	flash[:success] = "Bookmark was successfully submitted"
 
         format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
@@ -83,21 +87,21 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.xml
   def destroy
-    @bookmark = Bookmark.find(params[:id])
-    @bookmark.destroy
-    flash[:notice] = "Bookmark was successfully deleted"
-    respond_to do |format|    
-
-      format.html { redirect_to(root_path) }
-      format.xml  { head :ok }
+	@bookmark = Bookmark.find(params[:id])
+	user = @bookmark.user
+	@bookmark.destroy
+	flash[:notice] = "Bookmark was successfully deleted"
+	respond_to do |format|    
+	 	format.html {redirect_to(user)}
+		format.xml  { head :ok }
     end
   end
 
 def feed
-   @bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
-    response.headers["Content-Type"] = "application/xml; charset=utf-8"  
-    render :action=>"rss", :layout=>false 
-   
+	@bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
+	response.headers["Content-Type"] = "application/xml; charset=utf-8"  
+	render :action=>"rss", :layout=>false 
+ 
 end
 
 

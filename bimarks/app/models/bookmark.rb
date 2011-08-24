@@ -8,4 +8,17 @@ class Bookmark < ActiveRecord::Base
   default_scope :order => 'bookmarks.created_at DESC'
   has_many :ratings, :dependent => :destroy
 
+	# Returns the number of the submitted ratings for this bookmark.
+	def count_ratings
+		self.ratings.all.count
+	end
+
+	def avg_rating
+		# First we find the average rating of this bookmark
+		@average = self.ratings.average(:stars)
+		# Then we return 0 if @average = nil, or @average else.
+		@average ? @average : 0
+	end
+
+
 end

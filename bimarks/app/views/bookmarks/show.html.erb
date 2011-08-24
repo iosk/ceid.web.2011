@@ -21,6 +21,7 @@
   <%= @bookmark.created_at %>
 </p>
 <!-- Only the owner can delete a bookmark -->
+
 <% if current_user?(@bookmark.user) %>
 <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |<% end%>
 <%= link_to 'Back', bookmarks_path %>
