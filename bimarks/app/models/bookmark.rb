@@ -21,8 +21,5 @@ class Bookmark < ActiveRecord::Base
 		# Then we return 0 if @average = nil, or @average else.
 		@average ? @average : 0
 	end
-	
-
-
 
 end

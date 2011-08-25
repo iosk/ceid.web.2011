@@ -20,6 +20,17 @@
   <b>Submitted at:</b>
   <%= @bookmark.created_at %>
 </p>
+
+<p>
+  <b>Average Rating:</b>
+  <%= @bookmark.avg_rating %> from <%= @bookmark.count_ratings %> votes.
+</p>
+
+<!-- Only signed in users can rate a bookmark -->
+
+<%= render 'ratings_form' %>
+
+
 <!-- Only the owner can delete a bookmark -->
 
 <% if current_user?(@bookmark.user) %>
