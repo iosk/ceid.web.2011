@@ -1,0 +1,19 @@
+<% if signed_in? %>
+<section id="rating">
+		<%= form_for @current_user_rating, :bookmark => @bookmark do |f| %>
+		
+                <div id="ratingbox">
+                    <ul id="ratingbuttons">
+			<% # We add this hidden field to add a bookmark_id %>
+			<%= hidden_field_tag(:bookmark_id, @bookmark.id) %>
+                        <li><%= f.radio_button :stars, "5" %><span>Excellent</span></li>
+                        <li><%= f.radio_button :stars, "4" %><span>Very Good</span></li>
+                        <li><%= f.radio_button :stars, "3" %><span>Good</span></li>
+                        <li><%= f.radio_button :stars, "2" %><span>Average</span></li>
+                        <li><%= f.radio_button :stars, "1" %><span>Poor</span></li>  
+                    </ul>
+                    <div class="center"><%= submit_tag "Rate!" %></div>
+                </div>
+            <%end %>
+    </section>
+<% end %>

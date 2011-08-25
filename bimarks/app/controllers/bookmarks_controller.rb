@@ -2,8 +2,8 @@ class BookmarksController < ApplicationController
   # GET /bookmarks
   # GET /bookmarks.xml
 
-  before_filter :authenticate, :only => [:create, :destroy, :new, :edit, :update]
-  before_filter :authorized_user, :only => :destroy
+  before_filter :authenticate, :only => [:create, :destroy, :new]
+  before_filter :authorized_user, :only => [:destroy, :edit, :update]
 
   def index
 	@bookmarks = Bookmark.page(params[:page]).order("url")
@@ -17,11 +17,13 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1.xml
   def show
 	@bookmark = Bookmark.find(params[:id])
+
 	if signed_in?
-		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user)
+		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
 		unless @current_user_rating 
 			# if current_user has not rated this bookmark yet then create a new rating
-			@current_user_rating = current_user.ratings.new
+			@current_user_rating = @bookmark.ratings.new
+			@current_user_rating.user = current_user
 		end
 	end
 
@@ -35,8 +37,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
-	@current_user_rating = current_user.ratings.new
-	#@this_rating = Rating.new
+
 	respond_to do |format|
 	format.html # new.html.erb
 	format.xml  { render :xml => @bookmark }
@@ -52,7 +53,8 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.xml
   def create
 	@bookmark = current_user.bookmarks.build(params[:bookmark])
-	
+	@current_user_rating = @bookmark.ratings.new
+	@current_user_rating.user = current_user
 	# We create a new rating for this bookmark
 	# and we save it.
 	# We assume that every user submitting a new bookmark
@@ -119,4 +121,5 @@ end
       @bookmark = current_user.bookmarks.find_by_id(params[:id])
       redirect_to root_path if @bookmark.nil?
     end
+
 end

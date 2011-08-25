@@ -1,29 +1,34 @@
 Bimarks::Application.routes.draw do
-  get "sessions/new"
 
-  match '/register',  :to => 'users#new'
 
-  match '/contact', :to => 'pages#contact'
-  match '/about',   :to => 'pages#about'
-  match '/help',    :to => 'pages#help'
+get "sessions/new"
+
+ 	 match '/register',  :to => 'users#new'
+
+ 	 match '/contact', :to => 'pages#contact'
+ 	 match '/about',   :to => 'pages#about'
+ 	 match '/help',    :to => 'pages#help'
   
-  match '/login',  :to => 'sessions#new'
-  match '/logout', :to => 'sessions#destroy'
+ 	 match '/login',  :to => 'sessions#new'
+ 	 match '/logout', :to => 'sessions#destroy'
 
-  match '/rss',    :to => 'bookmarks#feed'
-  
-  resources :cups
+ 	 match '/rss',    :to => 'bookmarks#feed'
 
-  resources :bookmarks
+  	resources :cups
+
+  	resources :bookmarks
 
 	resources :users
 	resources :sessions, :only => [:new, :create, :destroy]
 	resources :bookmarks, :only => [:create, :destroy]
 	resources :ratings, :only => [:create, :update, :destroy]
 
+
+
   
   get "home/index"
-  get "home/bookmarks"
+  get "home/bookmarks" 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
