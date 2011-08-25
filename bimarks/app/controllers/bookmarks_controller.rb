@@ -5,8 +5,8 @@ class BookmarksController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy, :new, :edit, :update]
   before_filter :authorized_user, :only => :destroy
 
-
   def index
+<<<<<<< HEAD
 #     @bookmarks = Bookmark.all
       @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 5)
 
@@ -14,47 +14,74 @@ class BookmarksController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @bookmarks }
     end
+=======
+	@bookmarks = Bookmark.page(params[:page]).order("url")
+	respond_to do |format|
+      		format.html # index.html.erb
+		format.xml  { render :xml => @bookmarks }
+    	end
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
   end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml
   def show
-    @bookmark = Bookmark.find(params[:id])
+	@bookmark = Bookmark.find(params[:id])
+	if signed_in?
+		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user)
+		unless @current_user_rating 
+			# if current_user has not rated this bookmark yet then create a new rating
+			@current_user_rating = current_user.ratings.new
+		end
+	end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @bookmark }
-    end
+    	respond_to do |format|
+      		format.html # show.html.erb
+      		format.xml  { render :xml => @bookmark }
+    	end
   end
 
   # GET /bookmarks/new
   # GET /bookmarks/new.xml
   def new
-    @bookmark = Bookmark.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @bookmark }
+	@bookmark = Bookmark.new
+	@current_user_rating = current_user.ratings.new
+	#@this_rating = Rating.new
+	respond_to do |format|
+	format.html # new.html.erb
+	format.xml  { render :xml => @bookmark }
     end
   end
 
   # GET /bookmarks/1/edit
   def edit
-    @bookmark = Bookmark.find(params[:id])
+	@bookmark = Bookmark.find(params[:id])
   end
 
   # POST /bookmarks
   # POST /bookmarks.xml
   def create
-    @bookmark = current_user.bookmarks.build(params[:bookmark])
+	@bookmark = current_user.bookmarks.build(params[:bookmark])
+	
+	# We create a new rating for this bookmark
+	# and we save it.
+	# We assume that every user submitting a new bookmark
+	# will automatically rate it as a 5 ~ else what's the reason
+	# of submitting it in the first place?
+	@this_rating = @bookmark.ratings.build(params[:rating])
+	@this_rating.bookmark_id = @bookmark
+	@this_rating.user = current_user
+	@this_rating.stars = 5
+	@this_rating.save 
 
-    respond_to do |format|
-      if @bookmark.save
-      flash[:success] = "Bookmark was successfully submitted"
+	respond_to do |format|
+	if @bookmark.save
+	flash[:success] = "Bookmark was successfully submitted"
 
         format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
       else
+	flash[:error] = "Bookmark was not submitted :~("
         format.html { render :action => "new" }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
       end
@@ -80,21 +107,21 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.xml
   def destroy
-    @bookmark = Bookmark.find(params[:id])
-    @bookmark.destroy
-    flash[:notice] = "Bookmark was successfully deleted"
-    respond_to do |format|    
-
-      format.html { redirect_to(root_path) }
-      format.xml  { head :ok }
+	@bookmark = Bookmark.find(params[:id])
+	user = @bookmark.user
+	@bookmark.destroy
+	flash[:notice] = "Bookmark was successfully deleted"
+	respond_to do |format|    
+	 	format.html {redirect_to(user)}
+		format.xml  { head :ok }
     end
   end
 
 def feed
-   @bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
-    response.headers["Content-Type"] = "application/xml; charset=utf-8"  
-    render :action=>"rss", :layout=>false 
-   
+	@bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
+	response.headers["Content-Type"] = "application/xml; charset=utf-8"  
+	render :action=>"rss", :layout=>false 
+ 
 end
 
 

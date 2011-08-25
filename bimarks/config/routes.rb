@@ -12,17 +12,15 @@ Bimarks::Application.routes.draw do
 
   match '/rss',    :to => 'bookmarks#feed'
   
-
- 
-
-  
   resources :cups
 
   resources :bookmarks
 
-  resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :bookmarks, :only => [:create, :destroy] 
+	resources :users
+	resources :sessions, :only => [:new, :create, :destroy]
+	resources :bookmarks, :only => [:create, :destroy]
+	resources :ratings, :only => [:create, :update, :destroy]
+
   
   get "home/index"
   get "home/bookmarks"
