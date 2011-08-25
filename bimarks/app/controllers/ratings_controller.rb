@@ -1,4 +1,4 @@
-class BookmarksController < ApplicationController
+class RatingsController < ApplicationController
   before_filter :authorized_user, :only => [:destroy, :create, :edit]
 
 

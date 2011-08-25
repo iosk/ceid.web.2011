@@ -6,7 +6,6 @@ class BookmarksController < ApplicationController
   before_filter :authorized_user, :only => :destroy
 
   def index
-#     @bookmarks = Bookmark.all
 	@bookmarks = Bookmark.page(params[:page]).order("url")
 	respond_to do |format|
       		format.html # index.html.erb
@@ -18,7 +17,6 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1.xml
   def show
 	@bookmark = Bookmark.find(params[:id])
-
 	if signed_in?
 		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user)
 		unless @current_user_rating 
@@ -26,7 +24,6 @@ class BookmarksController < ApplicationController
 			@current_user_rating = current_user.ratings.new
 		end
 	end
-
 
     	respond_to do |format|
       		format.html # show.html.erb
@@ -38,7 +35,8 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
-
+	@current_user_rating = current_user.ratings.new
+	#@this_rating = Rating.new
 	respond_to do |format|
 	format.html # new.html.erb
 	format.xml  { render :xml => @bookmark }
@@ -54,6 +52,17 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.xml
   def create
 	@bookmark = current_user.bookmarks.build(params[:bookmark])
+	
+	# We create a new rating for this bookmark
+	# and we save it.
+	# We assume that every user submitting a new bookmark
+	# will automatically rate it as a 5 ~ else what's the reason
+	# of submitting it in the first place?
+	@this_rating = @bookmark.ratings.build(params[:rating])
+	@this_rating.bookmark_id = @bookmark
+	@this_rating.user = current_user
+	@this_rating.stars = 5
+	@this_rating.save 
 
 	respond_to do |format|
 	if @bookmark.save
@@ -62,6 +71,7 @@ class BookmarksController < ApplicationController
         format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
       else
+	flash[:error] = "Bookmark was not submitted :~("
         format.html { render :action => "new" }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
       end

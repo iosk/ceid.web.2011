@@ -6,7 +6,10 @@ class Bookmark < ActiveRecord::Base
   attr_accessible :title, :q_review, :url
 
   default_scope :order => 'bookmarks.created_at DESC'
+
   has_many :ratings, :dependent => :destroy
+  accepts_nested_attributes_for :ratings
+
 
 	# Returns the number of the submitted ratings for this bookmark.
 	def count_ratings
@@ -19,6 +22,8 @@ class Bookmark < ActiveRecord::Base
 		# Then we return 0 if @average = nil, or @average else.
 		@average ? @average : 0
 	end
+	
+
 
 
 end
