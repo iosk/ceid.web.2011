@@ -7,19 +7,12 @@ class BookmarksController < ApplicationController
 
   def index
 
-#     @bookmarks = Bookmark.all
-      @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 5)
+      @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 10)
 
       respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @bookmarks }
-    end
-
-	@bookmarks = Bookmark.page(params[:page]).order("url")
-	respond_to do |format|
       		format.html # index.html.erb
 		format.xml  { render :xml => @bookmarks }
-    	end
+      end
 
   end
 

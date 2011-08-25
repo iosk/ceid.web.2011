@@ -1,10 +1,6 @@
 <h1>Listing bookmarks</h1>
 
-
-<%= paginate @bookmarks %>
-
 <%= will_paginate %>
-
 
 <table>
   <tr>
@@ -12,9 +8,6 @@
     <th>Url</th>
     <th>Q review</th>
     <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @bookmarks.each do |bookmark| %>
@@ -22,7 +15,7 @@
     <td><%= bookmark.title %></td>
     <td><%= bookmark.url %></td>
     <td><%= bookmark.q_review %></td>
-    <td><%= bookmark.date %></td>
+    <td><%= bookmark.created_at %></td>
     <td><%= link_to 'Show', bookmark %></td>
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <% if (current_user == bookmark.user) %><td><%= link_to 'Destroy', bookmark, :confirm => 'Are you sure?', :method => :delete %></td><%end %>
@@ -31,5 +24,5 @@
 </table>
 
 <br />
-
+<%= will_paginate %>
 <%= link_to 'New Bookmark', new_bookmark_path %>
