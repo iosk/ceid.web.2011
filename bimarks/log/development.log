@@ -56988,3 +56988,236 @@ SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_contr
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:36 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:36 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:37 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:38 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:39 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:41 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:34:53 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:7: syntax error, unexpected tLSHFT
+<<<<<<< HEAD
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:10: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:18: syntax error, unexpected tRSHFT, expecting kEND
+>>>>>>> a08779834ed19b34a7c3eb783fa3a18d29dcb2b1
+  ^
+/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:35:14 +0300 2011
+
+SyntaxError (/home/federico/web/ceid.web.2011/bimarks/app/controllers/home_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:36:06 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 155 LIMIT 1[0m
+Rendered bookmarks/_bookmark.html.erb (34.4ms)
+Rendered home/index.html.erb within layouts/application (116.1ms)
+Completed   in 134ms
+
+ActionView::Template::Error (Table 'bimarks_development.ratings' doesn't exist):
+    7:    	<td><a href="http://<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
+    8:     	<td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
+    9:     	<td><%= bookmark.user.username %></td>
+    10: 	<td><%= bookmark.avg_rating %></td>
+    11: <% if current_user?(bookmark.user) %>
+    12:     <td>
+    13:     <%= link_to "Destroy", bookmark, :method => :delete,
+  app/models/bookmark.rb:20:in `avg_rating'
+  app/views/bookmarks/_bookmark.html.erb:10:in `_app_views_bookmarks__bookmark_html_erb___261422065__620746118_1577934'
+  app/views/home/index.html.erb:30:in `_app_views_home_index_html_erb__904429998__622010778_0'
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.5ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.6ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110511174603)
+Migrating to CreateBookmarks (20110511175811)
+Migrating to CreateCups (20110511192550)
+Migrating to FixUsers (20110820165927)
+Migrating to AddUniqueNameAndEmail (20110821004605)
+Migrating to RemovePasswordsFromUsers (20110821012010)
+Migrating to CreateRatings (20110824160835)
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE `ratings`
+Mysql2::Error: Unknown table 'ratings': DROP TABLE `ratings`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.2ms)[0m  DROP TABLE `bookmarks`
+  [1m[36mSQL (6.2ms)[0m  [1mCREATE TABLE `bookmarks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `url` varchar(255), `q_review` text, `date` date, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.1ms)[0m  [1mDROP TABLE `cups`[0m
+  [1m[35mSQL (4.1ms)[0m  CREATE TABLE `cups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `size` int(11), `colour` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (3.8ms)[0m  CREATE TABLE `ratings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `bookmark_id` int(11) NOT NULL, `stars` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `ratings`[0m
+  [1m[35mSQL (6.7ms)[0m  CREATE INDEX `index_ratings_on_bookmark_id` ON `ratings` (`bookmark_id`)
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.4ms)[0m  DROP TABLE `users`
+  [1m[36mSQL (4.5ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime, `is_admin` tinyint(1) DEFAULT 0, `salt` varchar(255), `hashed_password` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (4.8ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (6.6ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_username` ON `users` (`username`)[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110824160835')
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 25 06:37:38 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `bookmarks`.* FROM `bookmarks` ORDER BY bookmarks.created_at DESC
+  [1m[36mSQL (1.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered collection (0.0ms)
+Rendered collection (0.0ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (78.9ms)
+Completed 200 OK in 94ms (Views: 80.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/register" for 127.0.0.1 at Thu Aug 25 06:37:45 +0300 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (65.1ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered layouts/_footer.html.erb (1.9ms)
+Rendered users/new.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 97ms (Views: 84.3ms | ActiveRecord: 0.2ms)
