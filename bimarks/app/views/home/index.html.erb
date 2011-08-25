@@ -1,11 +1,13 @@
-<h1>biMarks, when the bookmarks went bi!</h1>
+<h1>biMarks, because even the bookmarks can be bi.</h1>
 <p>fuck you i won't do what you tell me</p>
+revision 1
 
 
 <% if signed_in? %>
-	<p><b><%= link_to 'New bookmark', new_bookmark_path %> </b></p>
-<% end %>
 
+	<p><b><%= link_to 'New bookmark', new_bookmark_path %> </b></p>
+
+<% end %>
 <center>
 	<table width=500>
 <tr>
@@ -20,16 +22,14 @@
 		<th>Submitted by</th>
 	  </tr>
 
-
+	 
 	<%= render @bookmarks_most_recent %>
-
 	</table>
 </td>
 
 <td>
-
-	<table>
-	<caption>Top Rated</caption>
+	<table >
+	<caption>Favorites</caption>
 	  <tr>
 	    <th>Title</th>
 	    <th>Url</th>
@@ -37,7 +37,7 @@
 		<th>Submitted by</th>
 	  </tr>
 
-	<%= render @bookmarks_top_rated %>
+	<%= render @bookmarks_most_rated %>
 	</table>
 </td>
 
