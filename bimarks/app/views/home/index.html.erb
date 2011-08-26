@@ -4,10 +4,21 @@ revision 1
 
 
 <% if signed_in? %>
-
-	<p><b><%= link_to 'New bookmark', new_bookmark_path %> </b></p>
+	
+	<p><%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %></p>
 
 <% end %>
+
+
+<%= form_tag bookmarks_path, :method => 'get', :id => "bookmarks_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :title => nil %>
+  </p>
+ 
+<% end %>
+
 <center>
 	<table width=500><style>table { display: inline }</style>
 <tr>

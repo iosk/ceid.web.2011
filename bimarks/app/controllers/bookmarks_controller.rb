@@ -6,13 +6,16 @@ class BookmarksController < ApplicationController
   before_filter :authorized_user, :only => [:destroy, :edit, :update]
 
   def index
-    @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 10)
+    @bookmarks = Bookmark.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @bookmarks }
     end
   end
+
+
+
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml

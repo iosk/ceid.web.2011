@@ -1,5 +1,19 @@
 <h1>Listing bookmarks</h1>
 
+
+
+
+
+<%= form_tag bookmarks_path, :method => 'get', :id => "bookmarks_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :title => nil %>
+  </p>
+ 
+<% end %>
+
+
+
 <%= will_paginate %>
 
 <table>

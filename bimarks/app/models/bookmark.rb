@@ -26,4 +26,14 @@ class Bookmark < ActiveRecord::Base
 		@average ? @average : 0
 	end
 
+def self.search(search)
+  if search
+    where('title LIKE ? OR q_review LIKE ?', "%#{search}%" ,"%#{search}%")
+  else
+    scoped
+  end
+end
+
+
+
 end

@@ -120,3 +120,16 @@ $(elem).val(val); // also update the form element
 
 
 
+
+$(function() {
+  $("#bookmarks th a, #bookmars .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#bookmarks_search input").keyup(function() {
+    $.get($("#bookmarks_search").attr("action"), $("#bookmarks_search").serialize(), null, "script");
+    return false;
+  });
+});
+
+
