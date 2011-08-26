@@ -23,7 +23,7 @@
 <p>
   <b>Tagged as:</b><ul>
   <% for tag in @bookmark.tags %>
-    <li><%= tag.name %></li>
+    <li><%=h tag.name %></li>
   <% end %>
   </ul>
 </p>

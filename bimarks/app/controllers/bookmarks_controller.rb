@@ -51,7 +51,10 @@ class BookmarksController < ApplicationController
 
   # GET /bookmarks/1/edit
   def edit
-	@bookmark = Bookmark.find(params[:id])
+	  @bookmark = Bookmark.find(params[:id])
+	  if @bookmark.tags.empty?
+      3.times { tag = @bookmark.tags.build }
+    end
   end
 
   # POST /bookmarks
@@ -63,11 +66,11 @@ class BookmarksController < ApplicationController
   	# We assume that every user submitting a new bookmark
 	  # will automatically rate it as a 5 ~ else what's the reason
   	# of submitting it in the first place?
-  	#@this_rating = @bookmark.ratings.build(params[:rating])
-  	#@this_rating.bookmark_id = @bookmark
-    #	@this_rating.user = current_user
-	  # @this_rating.stars = 5
-	  # @this_rating.save 
+  	@this_rating = @bookmark.ratings.build(params[:rating])
+  	@this_rating.bookmark_id = @bookmark
+    @this_rating.user = current_user
+	  @this_rating.stars = 5
+	 # @this_rating.save 
 
 	  respond_to do |format|
 	    if @bookmark.save

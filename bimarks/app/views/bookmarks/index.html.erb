@@ -20,21 +20,12 @@
   <tr>
     <th>Title</th>
     <th>Url</th>
-    <th>Q review</th>
-    <th>Date</th>
+    <th>Added</th>
+    <th>Submitted by</th>
+    <th>Average Rating</th>
   </tr>
 
-<% @bookmarks.each do |bookmark| %>
-  <tr>
-    <td><%= bookmark.title %></td>
-    <td><%= bookmark.url %></td>
-    <td><%= bookmark.q_review %></td>
-    <td><%= bookmark.created_at %></td>
-    <td><%= link_to 'Show', bookmark %></td>
-    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
-    <% if (current_user == bookmark.user) %><td><%= link_to 'Destroy', bookmark, :confirm => 'Are you sure?', :method => :delete %></td><%end %>
-  </tr>
-<% end %>
+	<%= render @bookmarks %>
 </table>
 
 <br />

@@ -1,12 +1,5 @@
-<% if signed_in? %>
-  <section id="tag_form">
-  <%= form_for @current_bookmar_rating, :bookmark => @bookmark do |f| %>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="center"><%= submit_tag "Add new Tag!" %></div>
-  </div>
-  <%end %>
-  </section>
-<% end %>
+<p class ="fields">
+  <%= f.label :name, "Tag" %><br />
+  <%= f.text_field :name %>
+  <%= link_to_remove_field "Remove Tag", f %>
+</p>
