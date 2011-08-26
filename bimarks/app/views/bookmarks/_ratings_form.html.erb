@@ -1,6 +1,6 @@
 <% if signed_in? %>
 <section id="rating">
-		<%= form_for @current_user_rating do |f| %>
+		<%= form_for @current_user_rating, :bookmark => @bookmark do |f| %>
 		
                 <div id="ratingbox">
                     <ul id="ratingbuttons">		
