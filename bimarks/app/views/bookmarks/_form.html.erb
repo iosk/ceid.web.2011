@@ -25,8 +25,8 @@
     </div>
     <% f.fields_for :tags do |builder| %>
       <%= render "tags_form", :f => builder %>
-
     <% end %>
+   <p> <%= link_to_add_field "New Tag", f, :tags %></p>
 
     <div class ="submit">
     <%= submit_tag "Submit!" %></div>
