@@ -24,10 +24,8 @@
     <%= f.text_area :q_review %>
     </div>
     <% f.fields_for :tags do |builder| %>
-      <p>
-      <%= builder.label :name %><br />
-      <%= builder.text_field :name %>
-      </p>
+      <%= render "tags_form", :f => builder %>
+
     <% end %>
 
     <div class ="submit">

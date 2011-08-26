@@ -48,7 +48,10 @@ class BookmarksController < ApplicationController
 
   # GET /bookmarks/1/edit
   def edit
-	@bookmark = Bookmark.find(params[:id])
+	  @bookmark = Bookmark.find(params[:id])
+	  if @bookmark.tags.empty?
+      3.times { tag = @bookmark.tags.build }
+    end
   end
 
   # POST /bookmarks
