@@ -22,15 +22,11 @@
 </p>
 
 <p>
-  <b>Average Rating:</b>
-  <%= @bookmark.avg_rating %> from <%= @bookmark.count_ratings %> votes.
-</p>
-
 <ul class="stars floatstars">
 	<li class="yellowstars" style="width: <%= @bookmark.avg_rating * 25 %>px !important;"></li>
-	<li class="text"><%= @bookmark.avg_rating %> average from <%= pluralize(@bookmark.count_ratings, "vote") %></li>
+        <li class="text"><%= @bookmark.avg_rating %> average from <%= pluralize(@bookmark.count_ratings, "vote") %></li>
     </ul>
-
+</p>
 <!-- Only signed in users can rate a bookmark -->
 
 <%= render 'ratings_form' %>

@@ -181,6 +181,8 @@ td.sidebar {
   list-style: square;
 }
 
+
+/* For the motherfucking pagination - A ripoff from digg ;)*/
 .pagination {
   background: white;
   cursor: default;
@@ -231,19 +233,23 @@ td.sidebar {
 
 /* For the stars ;) */
 .stars  { margin: 0; padding: 0; list-style: none; }
+
 .stars {
 	height: 25px;
 	width: 125px;
 
 	background: url('../images/star_test.png') left repeat-x; }
+
 .stars .yellowstars { 
 	height: 25px;
 	width: 0px;
 
 	background: url('../images/star.png') left repeat-x; } 
-.stars .text { text-align:
-	right;
+
+.stars .text { 
+	text-align:right;
 	font-size: 10px; 
-	}
-.floatstars { float: right}
+	font-weight: bold;}
+
+
 
