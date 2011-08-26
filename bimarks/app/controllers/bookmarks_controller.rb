@@ -6,34 +6,32 @@ class BookmarksController < ApplicationController
   before_filter :authorized_user, :only => [:destroy, :edit, :update]
 
   def index
-
-      @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 10)
-
-      respond_to do |format|
-      		format.html # index.html.erb
-		format.xml  { render :xml => @bookmarks }
-      end
-
+    @bookmarks = Bookmark.paginate(:page => params[:page], :per_page => 10)
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @bookmarks }
+    end
   end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml
   def show
-	@bookmark = Bookmark.find(params[:id])
+	  @bookmark = Bookmark.find(params[:id])
 
-	if signed_in?
-		@current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
-		unless @current_user_rating 
-			# if current_user has not rated this bookmark yet then create a new rating
-			@current_user_rating = @bookmark.ratings.new
-			@current_user_rating.user = current_user
-		end
-	end
+	  if signed_in?
+		  @current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
+		  unless @current_user_rating 
+			  # if current_user has not rated this bookmark yet then create a new rating
+		  	@current_user_rating = @bookmark.ratings.new
+			  @current_user_rating.user = current_user
+		  end
+	  end
 
-    	respond_to do |format|
-      		format.html # show.html.erb
-      		format.xml  { render :xml => @bookmark }
-    	end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @bookmark }
+    end
   end
 
   # GET /bookmarks/new

@@ -1,0 +1,12 @@
+<% if signed_in? %>
+  <section id="tag_form">
+  <%= form_for @current_user_rating, :bookmark => @bookmark do |f| %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="center"><%= submit_tag "Tag!" %></div>
+  </div>
+  <%end %>
+  </section>
+<% end %>
