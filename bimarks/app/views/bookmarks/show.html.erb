@@ -20,6 +20,12 @@
   <b>Submitted at:</b>
   <%= @bookmark.created_at %>
 </p>
+<p><ul>
+  <b>Tagged as:</b>
+  <% for tag in @bookmark.tags %>
+    <li><%= tag.name %></li>
+  <% end %>
+</ul>
 
 <p>
 <ul class="stars floatstars">

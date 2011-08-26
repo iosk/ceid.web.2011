@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110826023157) do
+ActiveRecord::Schema.define(:version => 20110826132516) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "title"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20110826023157) do
   end
 
   add_index "ratings", ["bookmark_id"], :name => "index_ratings_on_bookmark_id"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "bookmark_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tags", :force => true do |t|
     t.string   "name"

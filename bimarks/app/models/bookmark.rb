@@ -2,17 +2,16 @@ class Bookmark < ActiveRecord::Base
   belongs_to :user
   #validates :url
   validates :q_review, :length => { :maximum => 140}
-  attr_accessible :title, :q_review, :url
+  attr_accessible :title, :q_review, :url, :tags_attributes
 
   default_scope :order => 'bookmarks.created_at DESC'
 
   # Associations
   has_many :ratings, :dependent => :destroy
-  has_many :taggings
+  has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
 
-
-  accepts_nested_attributes_for :ratings
+  accepts_nested_attributes_for :tags
 
 
 	# Returns the number of the submitted ratings for this bookmark.

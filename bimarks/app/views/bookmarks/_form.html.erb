@@ -1,31 +1,37 @@
-<%= form_for(@bookmark) do |f| %>
+<% form_for @bookmark do |f| %>
+
   <% if @bookmark.errors.any? %>
     <div id="error_explanation">
     <h2><%= pluralize(@bookmark.errors.count, "error") %> prohibited this bookmark from being saved:</h2>
     <ul>
-      <% @bookmark.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+    <% @bookmark.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
     </ul>
     </div>
   <% end %>
 
-  <div class="field">
+    <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </div>
-  <div class="field">
+    </div>
+    <div class="field">
     <%= f.label :url %><br />
     <%= f.text_field :url %>
-  </div>
-  <div class="field">
+    </div>
+    <div class="field">
     <%= f.label :q_review %><br />
     <%= f.text_area :q_review %>
-  </div>
+    </div>
+    <% f.fields_for :tags do |builder| %>
+      <p>
+      <%= builder.label :name %><br />
+      <%= builder.text_field :name %>
+      </p>
+    <% end %>
 
-  <div class ="submit">
-    <%= f.submit %>
-  </div>
+    <div class ="submit">
+    <%= submit_tag "Submit!" %></div>
 
 <% end %>
 

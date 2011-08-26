@@ -38,6 +38,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
+	3.times { tag = @bookmark.tags.build }
 
 	respond_to do |format|
 	format.html # new.html.erb
@@ -53,28 +54,25 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.xml
   def create
-	@bookmark = current_user.bookmarks.build(params[:bookmark])
-	@current_user_rating = @bookmark.ratings.new
-	@current_user_rating.user = current_user
-	# We create a new rating for this bookmark
-	# and we save it.
-	# We assume that every user submitting a new bookmark
-	# will automatically rate it as a 5 ~ else what's the reason
-	# of submitting it in the first place?
-	@this_rating = @bookmark.ratings.build(params[:rating])
-	@this_rating.bookmark_id = @bookmark
-	@this_rating.user = current_user
-	@this_rating.stars = 5
-	@this_rating.save 
+	  @bookmark = current_user.bookmarks.build(params[:bookmark])
+  	# We create a new rating for this bookmark
+  	# and we save it.
+  	# We assume that every user submitting a new bookmark
+	  # will automatically rate it as a 5 ~ else what's the reason
+  	# of submitting it in the first place?
+  	#@this_rating = @bookmark.ratings.build(params[:rating])
+  	#@this_rating.bookmark_id = @bookmark
+    #	@this_rating.user = current_user
+	  # @this_rating.stars = 5
+	  # @this_rating.save 
 
-	respond_to do |format|
-	if @bookmark.save
-	flash[:success] = "Bookmark was successfully submitted"
-
+	  respond_to do |format|
+	    if @bookmark.save
+	      flash[:success] = "Bookmark was successfully submitted"
         format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
       else
-	flash[:error] = "Bookmark was not submitted :~("
+	      flash[:error] = "Bookmark was not submitted :~("
         format.html { render :action => "new" }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
       end
