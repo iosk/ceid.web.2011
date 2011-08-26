@@ -1,5 +1,12 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+//########################################################
+//##       Remove Tag links                   	        ##
+//########################################################
+
+function remove_field(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".fields").hide();
+}
+
 
 
 //########################################################
