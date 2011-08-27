@@ -13,7 +13,7 @@ class Bookmark < ActiveRecord::Base
   # This lambda function automagically rejects all tag creations for which their name is blank. (we don't need no blank tags)
   accepts_nested_attributes_for :tags, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 
-
+  
 	# Returns the number of the submitted ratings for this bookmark.
 	def count_ratings
 		self.ratings.all.count
@@ -34,6 +34,14 @@ def self.search(search)
   end
 end
 
-
-
+def self.search_by_tag(search)
+  if search
+    find(:all, :conditions => [ 'tags.name LIKE ?', "%#{search}%"], :joins => [:tags])
+  else
+    scoped
+  end
+end
+    
+    
+  
 end

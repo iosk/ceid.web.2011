@@ -1,7 +1,7 @@
 class BookmarksController < ApplicationController
   # GET /bookmarks
   # GET /bookmarks.xml
-
+  
   before_filter :authenticate, :only => [:create, :destroy, :new]
   before_filter :authorized_user, :only => [:destroy, :edit, :update]
 

@@ -1,0 +1,2 @@
+<%= auto_complete_result @categories, :name %>
+

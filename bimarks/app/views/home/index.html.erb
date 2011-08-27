@@ -4,23 +4,32 @@ revision 1
 
 
 <% if signed_in? %>
-	
 	<p><%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn",
       :class => "inbox-sf-add-btn tip", :method => :get %></p>
-
 <% end %>
 
-
-<%= form_tag bookmarks_path, :method => 'get', :id => "bookmarks_search" do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :title => nil %>
-  </p>
+  <%= form_tag 'search', :method => 'get', :id => "bookmarks_search" do %>
+  <!-- The radio button submits the search type we want to do -->
+    <div class="form_row">
+    <label for="theme">Search:</label><br />
+    <% [ 'tags', 'title' ].each do |search_type| %>
+      <%= radio_button_tag 'search_type', search_type, @search_type == search_type %>
+      in
+      <%= search_type.humanize %>
+    <% end %>
+    </div>
  
-<% end %>
+    <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+    </p>
+    
+  <% end %>
+
+
 
 <center>
-	<table width=500><style>table { display: inline }</style>
+	<table width=500><style>table</style>
 <tr>
 <td>
 
