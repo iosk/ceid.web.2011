@@ -2,12 +2,31 @@
 //##       Remove Tag links                   	        ##
 //########################################################
 
+
+/*
+  Goes where link specifies it to. Then grabs previous item
+  that is a hidden input and sets its value to 1. In our case
+  It will just call destroy.
+  Finally it hides the field that was destroyed.
+*/
 function remove_field(link) {
   $(link).prev("input[type=hidden]").val("1");
   $(link).closest(".fields").hide();
 }
+//########################################################
+//##       Add Tag links                   	            ##
+//########################################################
 
 
+/*
+  This function creates a unique id via new Date
+  And then replaces the id created by "link_to_add_field_name with this unique id.
+*/
+function add_field(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
 
 //########################################################
 //##       Validation for USER Registration	        ##
