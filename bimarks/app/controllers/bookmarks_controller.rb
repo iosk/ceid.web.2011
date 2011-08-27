@@ -41,7 +41,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
-	3.times { tag = @bookmark.tags.build }
+	#3.times { tag = @bookmark.tags.build }
 
 	respond_to do |format|
 	format.html # new.html.erb
