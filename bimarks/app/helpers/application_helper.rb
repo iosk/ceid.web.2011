@@ -9,10 +9,10 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
-<<<<<<< HEAD
+
   
   
-=======
+
 
   def link_to_remove_field(name, f)
     f.hidden_field(:_destroy) + link_to_function( name, "remove_field(this)" )
@@ -22,7 +22,7 @@ module ApplicationHelper
 
 
 
->>>>>>> 663dfb8ea6669a30c56d6bfa78bf9fa7195682b0
+
 end
 
 

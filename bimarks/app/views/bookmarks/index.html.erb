@@ -2,6 +2,10 @@
 
 
 
+    <% [ 'Title', 'Tags' ].each do |type| %>
+      <%= radio_button_tag 'search_type', type, params[:search_type] == type %>
+      <%= type.humanize %>
+    <% end %>
 
 
 <%= form_tag bookmarks_path, :method => 'get', :id => "bookmarks_search" do %>
@@ -9,25 +13,14 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :title => nil %>
   </p>
- 
+
+<div id="bookmarks"><%= render 'searchbookmarks' %></div>  
+
 <% end %>
 
+ 
 
-
-<%= will_paginate %>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Added</th>
-    <th>Submitted by</th>
-    <th>Average Rating</th>
-  </tr>
-
-	<%= render @bookmarks %>
-</table>
-
+<%= will_paginate @bookmarks %> 
 <br />
-<%= will_paginate %>
+
 <%= link_to 'New Bookmark', new_bookmark_path %>
