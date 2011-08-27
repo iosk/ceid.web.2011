@@ -21,7 +21,7 @@
     </div>
     <div class="field">
     <%= f.label :q_review %><br />
-    <%= f.text_area :q_review, :rows => 2 %>
+    <%= f.text_area :q_review, :rows => 6 %>
     </div>
     <% f.fields_for :tags do |builder| %>
       <%= render "tags_form", :f => builder %>
