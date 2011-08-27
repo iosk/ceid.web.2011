@@ -9,13 +9,7 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
-<<<<<<< HEAD
 
-  
-  
-
-=======
->>>>>>> 635f481c7f38baea184ae47039412f556a5701e8
 
   # This function is pretty straight forward.
   # It puts a hidden field on item f. It also puts a link on item f.
@@ -42,11 +36,6 @@ module ApplicationHelper
   end
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 635f481c7f38baea184ae47039412f556a5701e8
 end
 
 
