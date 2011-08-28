@@ -263,3 +263,33 @@ td.sidebar {
 #tagcloud a{ text-decoration:none; }
 #tagcloud a:hover{ text-decoration:none; background-color:#ffffff; color:#000000; }
 
+
+/* Table pretty */
+table.pretty {
+  border-collapse: collapse;
+}
+
+.pretty td, .pretty th {
+  padding: 4px 10px;
+ // border: solid 1px #AAA;
+}
+
+.pretty .price {
+  text-align: right;
+}
+
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url('../images/up_arrow.gif');
+}
+
+.pretty th .desc {
+  background-image: url('../images/down_arrow.gif');
+  background-size: 7px 7px
+}
+

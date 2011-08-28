@@ -1,6 +1,8 @@
 <h1>Search Bookmarks by <%= @search_type%></h1>
  
   <%= form_tag 'search', :method => 'get', :id => "bookmarks_search" do %>
+  <!-- As One can see the whole code is in the form.
+       That's because we want dynamically to get all the info. -->
   <!-- The radio button submits the search type we want to do -->
     <div class="form_row">
     <label for="theme">Search:</label><br />
@@ -13,12 +15,13 @@
  
     <p>
     <%= text_field_tag :search, params[:search], :autocomplete => :on %>
+
     <%= submit_tag "Search" %>
     </p>
     
-  <% end %>
+
   <!-- .jquery dynamically fills this div. We got real time search babe!!! :) -->
   <div id="bookmarks"><%= render 'search_bookmarks' %></div>
-  <%= will_paginate @bookmarks%>
+  <% end %>
 
 
