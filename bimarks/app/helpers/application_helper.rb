@@ -11,6 +11,14 @@ module ApplicationHelper
   end
 
 
+  # sortable
+  def sortable(column, title = nil)
+    title ||= column.titleize
+    css_class = column == sort_column ? "current #{sort_direction}" : nil
+    direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
+    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
+  end
+
   # This function is pretty straight forward.
   # It puts a hidden field on item f. It also puts a link on item f.
   # When this link is activated:
@@ -36,9 +44,9 @@ module ApplicationHelper
   end
 
 
-def weight(tag)
-Bookmark.search_by_tag(tag.name).index_by {|r| r[:title]}.values.count
-end
+  def weight(tag)
+    Bookmark.search_by_tag(tag.name).index_by {|r| r[:title]}.values.count
+  end
  
 end
 

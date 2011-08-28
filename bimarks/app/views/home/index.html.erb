@@ -17,7 +17,7 @@ For COMMERCIAL USE LICENSING, visit http://tagcrowd.com/licensing.html
 -->
 
 
-<div id="tagcloud">
+<div id="tagcloud", class="round">
 <% for tag in @tag_unique  %>
 <span  class="tag<%=weight(tag)%>"><a href="#tagcloud"><%= tag.name %></a></span>
 <% end %> 

@@ -4,7 +4,7 @@ class Bookmark < ActiveRecord::Base
   validates :q_review, :length => { :maximum => 140}
   attr_accessible :title, :q_review, :url, :tags_attributes
 
-  default_scope :order => 'bookmarks.created_at DESC'
+ # default_scope :order => 'bookmarks.created_at DESC'
 
   # Associations
   has_many :ratings, :dependent => :destroy
@@ -24,6 +24,10 @@ class Bookmark < ActiveRecord::Base
 		@average = self.ratings.average(:stars)
 		# Then we return 0 if @average = nil, or @average else.
 		@average ? @average : 0
+	end
+	
+	def owner
+	 @owner = self.user.username
 	end
 
 def self.search(search)

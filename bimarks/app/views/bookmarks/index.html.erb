@@ -1,21 +1,13 @@
 <h1>Listing bookmarks</h1>
 
-  <% [ 'Title', 'Tags' ].each do |type| %>
-    <%= radio_button_tag 'search_type', type, params[:search_type] == type %>
-    <%= type.humanize %>
-  <% end %>
-
-
-  <%= form_tag bookmarks_path, :method => 'get', :id => "bookmarks_search" do %>
-    <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :title => nil %>
-    </p>
-
-    <div id="bookmarks"><%= render 'searchbookmarks' %></div>  
-
-  <% end %>
-
-  <%= will_paginate @bookmarks %><br />
+<table>
+  <tr>
+    <th><%= sortable "title" %></th>
+    <th><%= sortable "url"%></th>
+    <th><%= sortable "created_at", "Submitted at"%></th>
+    <th><%= sortable "owner", "Submitted by"%></th>
+    <th><%= sortable "avg_rating", "Rating"%></th>
+    </tr>    <div id="bookmarks"><%= render @bookmarks %></div>  
+  <%= will_paginate @bookmarks %><br /> </table>
 
 <%= link_to 'New Bookmark', new_bookmark_path %>

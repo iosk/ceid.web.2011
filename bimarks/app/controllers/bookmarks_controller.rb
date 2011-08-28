@@ -1,4 +1,8 @@
+require 'will_paginate/array'
 class BookmarksController < ApplicationController
+  helper_method :sort_column, :sort_direction
+
+
   # GET /bookmarks
   # GET /bookmarks.xml
   
@@ -6,11 +10,13 @@ class BookmarksController < ApplicationController
   before_filter :authorized_user, :only => [:destroy, :edit, :update]
 
   def index
-    @bookmarks = Bookmark.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+    if sort_direction == 'asc'
+      @bookmarks = Bookmark.all.sort_by(&:"#{sort_column}").paginate(:page => params[:page], :per_page => 15)
+    else
+      @bookmarks = Bookmark.all.sort_by(&:"#{sort_column}").reverse.paginate(:page => params[:page], :per_page => 15)
+           end
+
   end
-
-
-
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml
@@ -119,6 +125,17 @@ class BookmarksController < ApplicationController
   def authorized_user
     @bookmark = current_user.bookmarks.find_by_id(params[:id])
     redirect_to root_path if @bookmark.nil?
+  end
+  # We define these two new methods as to avoid sql injection problems
+# by users who tweak the url address. 
+  
+private
+  def sort_column
+    (Bookmark.column_names.include?(params[:sort]) || ["owner", "avg_rating"].include?(params[:sort]) )? params[:sort] : "title"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
 end
