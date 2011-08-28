@@ -9,7 +9,8 @@ gem 'rails', '3.0.7'
 gem 'mysql2', '< 0.3'
 gem 'will_paginate', '~> 3.0.pre4'
 
-
+#gem 'jquery-rails', '>= 1.0.12'
+#gem 'rails3-jquery-autocomplete'
 
 
 #group :development do

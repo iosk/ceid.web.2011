@@ -1,0 +1,9 @@
+<h1>Listing bookmarks tagged as <% @tag.name %></h1>
+
+  <%= render 'searchbookmarks' %>
+
+  <% end %>
+
+  <%= will_paginate @bookmarks %><br />
+
+<%= link_to 'New Bookmark', new_bookmark_path %>

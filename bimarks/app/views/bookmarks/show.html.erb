@@ -23,7 +23,8 @@
 <p>
   <b>Tagged as:</b><ul>
   <% for tag in @bookmark.tags %>
-    <li><%=h tag.name %></li>
+    <!-- This here is a fucking hack, I should better try and fix it ;) -->
+    <li><%= link_to tag.name, root_path+'tags/'+tag.id.to_s %></li>
   <% end %>
   </ul>
 </p>

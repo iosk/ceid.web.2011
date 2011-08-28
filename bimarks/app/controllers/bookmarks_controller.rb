@@ -36,7 +36,6 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
-	#3.times { tag = @bookmark.tags.build }
 
 	respond_to do |format|
 	format.html # new.html.erb
@@ -47,9 +46,9 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1/edit
   def edit
 	  @bookmark = Bookmark.find(params[:id])
-	  if @bookmark.tags.empty?
-      3.times { tag = @bookmark.tags.build }
-    end
+	  #if @bookmark.tags.empty?
+     # 3.times { tag = @bookmark.tags.build }
+  #  end
   end
 
   # POST /bookmarks
@@ -109,17 +108,17 @@ class BookmarksController < ApplicationController
     end
   end
 
-def feed
-	@bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
-	response.headers["Content-Type"] = "application/xml; charset=utf-8"  
-	render :action=>"rss", :layout=>false 
- 
-end
+  def feed
+  	@bookmarks = Bookmark.find(:all, :order=>"created_at DESC", :limit => 15)  
+  	response.headers["Content-Type"] = "application/xml; charset=utf-8"  
+	  render :action=>"rss", :layout=>false 
+   
+  end
 
 
-    def authorized_user
-      @bookmark = current_user.bookmarks.find_by_id(params[:id])
-      redirect_to root_path if @bookmark.nil?
-    end
+  def authorized_user
+    @bookmark = current_user.bookmarks.find_by_id(params[:id])
+    redirect_to root_path if @bookmark.nil?
+  end
 
 end

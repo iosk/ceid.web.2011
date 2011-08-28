@@ -1,0 +1,19 @@
+<h1>Listing bookmarks tagged as <%= @tag.name %></h1>
+
+<p>This tag has appeared in <%= pluralize(@count, "biMark") %></p>
+<table>
+	<caption>Most Recent</caption>
+	  <tr>
+	  <th>Title</th>
+	  <th>url</th>
+		<th>Submitted at</th>
+		<th>Submitted by</th>
+		<th>Average Rating</th>
+	  </tr>
+
+
+	
+<%= render @bookmarks %>
+</table>
+
+<%= link_to 'New Bookmark', new_bookmark_path %>
