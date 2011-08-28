@@ -8,8 +8,8 @@ class Bookmark < ActiveRecord::Base
 
   # Associations
   has_many :ratings, :dependent => :destroy
-  has_many :taggings, :dependent => :destroy
-  has_many :tags, :through => :taggings
+  has_many :taggings, :dependent => :destroy 
+  has_many :tags, :through => :taggings 
   # This lambda function automagically rejects all tag creations for which their name is blank. (we don't need no blank tags)
   accepts_nested_attributes_for :tags, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 

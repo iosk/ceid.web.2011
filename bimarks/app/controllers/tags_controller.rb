@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+<<<<<<< HEAD
   # We will use this controller to implement the autocomplete.
   def index
     @tags = Tag.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"]) 
@@ -14,4 +15,14 @@ class TagsController < ApplicationController
       format.xml  { render :xml => @user }
     end
   end
+=======
+
+
+def index
+  @tags = Tag.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+end
+
+
+
+>>>>>>> cacdf2f194a035dbc49a3a0eabfcd892e0c7b0d0
 end
