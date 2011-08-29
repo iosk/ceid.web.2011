@@ -11,8 +11,9 @@
     <th><%= sortable "owner", "Submitted by"%></th>
     <th><%= sortable "avg_rating", "Average Rating"%></th>
   </tr>
+  <!-- This is a partial fro creating the short view of bookmarks - for using in lists etc !-->
 <%  for bookmark in @bookmarks %>
-<!-- This is a partial fro creating the short view of bookmarks - for using in lists etc !-->
+
 <tr class="bookmark">
     	<td><%= link_to bookmark.title, bookmark %></td>
     	<td><a href="<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>

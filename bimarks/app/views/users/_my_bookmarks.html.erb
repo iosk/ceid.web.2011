@@ -1,0 +1,26 @@
+<%= hidden_field_tag :direction, params[:direction] %>  
+<%= hidden_field_tag :sort, params[:sort] %>  <%= will_paginate @my_bookmarks %>
+
+<table class = "pretty">
+  <tr>
+    <th><%= sortable "title", "Name" %></th>
+    <th><%= sortable "url"%></th>
+    <th><%= sortable "created_at", "Submitted at"%></th>
+    <th><%= sortable "owner", "Submitted by"%></th>
+    <th><%= sortable "avg_rating", "Average Rating"%></th>
+  </tr>
+<%  for bookmark in @my_bookmarks %>
+<!-- This is a partial fro creating the short view of bookmarks - for using in lists etc !-->
+  <tr>
+    	<td><%= link_to bookmark.title, bookmark %></td>
+    	<td><a href="<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
+    	<td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
+    	<td><%= bookmark.user.username %></td>
+	    <td><%= bookmark.avg_rating %></td>
+
+
+</tr>
+<% end %>
+</table>
+<%= will_paginate @my_bookmarks %>
+

@@ -9,43 +9,30 @@
   <%= @user.username %>
 </p>
 
-
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
+
 <! This is the sidebar for the profile page of the user !>
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
-      <h1>
-        <%= @user.username %>
-      </h1>
-    </td>
-    <td class="sidebar round">
+    
+
+</td>
+ <td class="sidebar round">
 	<strong>Name</strong> <%= @user.username %><br />
 	<strong>URL</strong>  <%= link_to user_path(@user), @user %><br/>
  	<strong>Submitted bookmarks</strong> <%= @my_bookmarks.count %>
 
-    </td>
+ </td>
   </tr>
 </table>
 
-
-	<table>
-	<%= will_paginate @my_bookmarks %>
-	<caption>Most Recently Submitted Bookmarks</caption>
-	  <tr>
-	    <th>Title</th>
-	    <th>Url</th>
-	    <th>Created at</th>
-	    <th>Submitted by</th>
-		<th>Average Rating</th>
-	  </tr>
-
-	<%= render @my_bookmarks %>
+<div id="my_bookmarks"><%= render 'my_bookmarks' %></div>
 	
-</table>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

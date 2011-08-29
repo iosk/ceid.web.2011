@@ -27,6 +27,10 @@ module SessionsHelper
 	def signed_in?
 	  !current_user.nil?
 	end
+	
+	def is_admin?(user)
+	    user.is_admin?
+	end
 
 # This methods are used to prevent bookmarks manipulation by non-signed in users.
 	def authenticate
@@ -60,4 +64,6 @@ module SessionsHelper
 	def remember_token
 		cookies.signed[:remember_token] || [nil, nil]
 	end
+	
+
 end

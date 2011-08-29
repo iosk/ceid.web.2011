@@ -1,13 +1,14 @@
+require 'will_paginate/array'
 class UsersController < ApplicationController
 
-  before_filter :authenticate, :only => [:edit, :update]
-  before_filter :correct_user, :only => [:edit, :update]
+#  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+ # before_filter :correct_user, :only => [:edit, :update, :destroy]
+  #before_filter :admin_user,   :only => :destroy
 
   # GET /users
   # GET /users.xml
   def index
     @users = User.all
-
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,10 +21,15 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @title = @user.username
-    @my_bookmarks = @user.bookmarks.paginate(:page => params[:page], :per_page => 5)
+    if sort_direction == 'asc'
+      @my_bookmarks = @user.bookmarks.sort_by(&:"#{sort_column}").paginate(:page => params[:page], :per_page => 15)
+    else
+      @my_bookmarks = @user.bookmarks.sort_by(&:"#{sort_column}").reverse.paginate(:page => params[:page], :per_page => 15)
+      end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
+      format.js
     end
   end
 
@@ -52,13 +58,13 @@ end
 
     respond_to do |format|
       if @user.save
-	log_in @user
-	flash[:success] = "Welcome to biMarks"
+	      log_in @user
+	      flash[:success] = "Welcome to biMarks"
         format.html { redirect_to(@user, :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
-	@user.password = ""
-	@user.password_confirmation = ""
+	      @user.password = ""
+	      @user.password_confirmation = ""
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
@@ -84,20 +90,24 @@ end
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(users_url) }
-      format.xml  { head :ok }
+	@user = User.find(params[:id])
+	@user.destroy
+	flash[:notice] = "User was successfully deleted"
+	respond_to do |format|    
+	 	format.html {redirect_to(users_path)}
+		format.xml  { head :ok }
     end
   end
+
   
     private
-
 
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path, :notice => 'WTF are you trying to do there dawg?! ~ The site\'s secure, got that?') unless current_user?(@user)
+    end
+    
+    def admin_user
+      redirect_to(root_path, :notice => 'Yo, you pretending to be admin? ~ The site\'s secure, got that?') unless current_user.is_admin?
     end
 end

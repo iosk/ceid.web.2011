@@ -48,13 +48,7 @@ class SearchController < ApplicationController
   
 # We define these two new methods as to avoid sql injection problems
 # by users who tweak the url address. 
-  def sort_column
-    (Bookmark.column_names.include?(params[:sort]) || ["owner", "avg_rating"].include?(params[:sort]) )? params[:sort] : "title"
-  end
-  
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
+
   
   
 end

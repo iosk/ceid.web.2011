@@ -42,6 +42,6 @@
 
 <!-- Only the owner can delete a bookmark -->
 
-<% if current_user?(@bookmark.user) %>
-<%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |<% end%>
+<% if signed_in? && (current_user?(@bookmark.user)|| current_user.is_admin?) %>
+<%= link_to 'Edit', edit_bookmark_path(@bookmark) %> | <%= link_to "Destroy", @bookmark, :method => :delete, :confirm => "Fo' real?", :id => @bookmark.id %> |<% end%> 
 <%= link_to 'Back', bookmarks_path %>

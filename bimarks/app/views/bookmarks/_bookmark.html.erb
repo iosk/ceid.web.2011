@@ -5,11 +5,11 @@
     	<td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
     	<td><%= bookmark.user.username %></td>
 	    <td><%= bookmark.avg_rating %> from <%= pluralize(bookmark.count_ratings,"vote") %></td>
-      <% if current_user?(bookmark.user) %>
+      <% if signed_in? && (current_user?(bookmark.user)|| current_user.is_admin?) %>
           <td>
           <%= link_to "Destroy", bookmark, :method => :delete,
                                      :confirm => "Fo' real?",
-                                     :title => bookmark.title %>
+                                     :id => bookmark.id %>
           </td>
          <% end %>
 </tr>

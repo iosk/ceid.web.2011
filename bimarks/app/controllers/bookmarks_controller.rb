@@ -7,15 +7,12 @@ class BookmarksController < ApplicationController
 
   # GET /bookmarks
   # GET /bookmarks.xml
-
-
   def index
     if sort_direction == 'asc'
       @bookmarks = Bookmark.all.sort_by(&:"#{sort_column}").paginate(:page => params[:page], :per_page => 15)
     else
       @bookmarks = Bookmark.all.sort_by(&:"#{sort_column}").reverse.paginate(:page => params[:page], :per_page => 15)
-           end
-
+    end
   end
 
   # GET /bookmarks/1
@@ -105,11 +102,10 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1.xml
   def destroy
 	@bookmark = Bookmark.find(params[:id])
-	user = @bookmark.user
 	@bookmark.destroy
 	flash[:notice] = "Bookmark was successfully deleted"
 	respond_to do |format|    
-	 	format.html {redirect_to(user)}
+	 	format.html {redirect_to(current_user)}
 		format.xml  { head :ok }
     end
   end
@@ -123,8 +119,8 @@ class BookmarksController < ApplicationController
 
 
   def authorized_user
-    @bookmark = current_user.bookmarks.find_by_id(params[:id])
-    redirect_to root_path if @bookmark.nil?
+    (@bookmark = current_user.bookmarks.find_by_id(params[:id])
+    redirect_to(root_path, :notice => 'WTF are you trying to do there dawg?! ~ The site\'s secure, got that?') if @bookmark.nil?)     unless current_user.is_admin?
   end
   # We define these two new methods as to avoid sql injection problems
 # by users who tweak the url address. 
