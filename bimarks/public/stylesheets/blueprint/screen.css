@@ -18,7 +18,7 @@ article, aside, details, figcaption, figure, dialog, footer, header, hgroup, men
 body {line-height:1.5;background:white;}
 table {border-collapse:separate;border-spacing:0;}
 caption, th, td {text-align:left;font-weight:normal;float:none !important;}
-table, th, td {vertical-align:middle;}
+table, th, td {vertical-align:middle;text-align:center;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
@@ -84,7 +84,7 @@ fieldset {padding:0 1.4em 1.4em 1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
 legend {font-weight:bold;font-size:1.2em;margin-top:-0.2em;margin-bottom:1em;}
 fieldset, #IE8#HACK {padding-top:1.4em;}
 legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
-input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;color:#000;}
+input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea {background-color:#FFFFDA;border:1px solid #bbb;color:#000;}
 input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
 select {background-color:#fff;border-width:1px;border-style:solid;}
 input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea, select {margin:0.5em 0;}

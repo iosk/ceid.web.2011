@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :correct_user, :only => [:edit, :update]
+
   # GET /users
   # GET /users.xml
   def index
@@ -36,9 +40,10 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-    @user = User.find(params[:id])
-  end
+def edit
+  @user = User.find(params[:id])
+  @title = "Edit user"
+end
 
   # POST /users
   # POST /users.xml
@@ -87,4 +92,12 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+    private
+
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path, :notice => 'WTF are you trying to do there dawg?! ~ The site\'s secure, got that?') unless current_user?(@user)
+    end
 end

@@ -16,26 +16,24 @@ This code and its rendered image are released under the Creative Commons Attribu
 For COMMERCIAL USE LICENSING, visit http://tagcrowd.com/licensing.html
 -->
 
+  <div id="tagcloud", class="round">
+    <% for tag in @tag_unique  %>
+      <span  class="tag<%=weight(tag)%>"><%= link_to tag.name, '/tags/' + tag.id.to_s %></a></span>
+    <% end %> 
+  </div>
 
-<div id="tagcloud", class="round">
-<% for tag in @tag_unique  %>
-<span  class="tag<%=weight(tag)%>"><a href="#tagcloud"><%= tag.name %></a></span>
-<% end %> 
-</div>
 
-
-<% if signed_in? %>
-	<p><%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn",
-      :class => "inbox-sf-add-btn tip", :method => :get %></p>
-<% end %>
+  <% if signed_in? %>
+	  <p><%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn", 
+	        :class => "inbox-sf-add-btn tip", :method => :get %></p>
+  <% end %>
 
   <%= form_tag 'search', :method => 'get', :id => "bookmarks_search" do %>
   <!-- The radio button submits the search type we want to do -->
     <div class="form_row">
     <label for="theme">Search:</label><br />
     <% [ 'tags', 'title' ].each do |search_type| %>
-      <%= radio_button_tag 'search_type', search_type, @search_type == search_type %>
-      in
+      <%= radio_button_tag 'search_type', search_type, @search_type == search_type %>in
       <%= search_type.humanize %>
     <% end %>
     </div>
@@ -46,44 +44,32 @@ For COMMERCIAL USE LICENSING, visit http://tagcrowd.com/licensing.html
     </p>
     
   <% end %>
-
-
-
-<center>
-	<table width=500><style>table</style>
-<tr>
-<td>
-
-	<table>
+<table>
 	<caption>Most Recent</caption>
 	  <tr>
 	  <th>Title</th>
 	  <th>url</th>
 		<th>Submitted at</th>
 		<th>Submitted by</th>
-		<th>Average Rating</th>
+		<th>Rating</th>
 	  </tr>
+	  <%= render @bookmarks_most_recent %>
+</table>
 
-	<%= render @bookmarks_most_recent %>
-	</table>
-</td>
-
-<td>
-	<table >
-	<caption>Favorites</caption>
+<table>
+	<caption>Top Rated</caption>
 	  <tr>
 	  <th>Title</th>
 	  <th>url</th>
 		<th>Submitted at</th>
 		<th>Submitted by</th>
-		<th>Average Rating</th>
+		<th>Rating</th>
 	  </tr>
-
-	<%= render @bookmarks_top_rated %>
-	</table>
-</td>
-
-</tr>
+	  <%= render @bookmarks_top_rated %>
 </table>
+
+
+
+
 </center>
 

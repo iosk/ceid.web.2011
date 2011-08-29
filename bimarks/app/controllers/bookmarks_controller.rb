@@ -1,12 +1,13 @@
 require 'will_paginate/array'
 class BookmarksController < ApplicationController
   helper_method :sort_column, :sort_direction
-
+  
+  before_filter :authenticate, :only => [:create, :destroy, :new]
+  before_filter :authorized_user, :only => [:destroy, :edit, :update]
 
   # GET /bookmarks
   # GET /bookmarks.xml
-  before_filter :authenticate, :only => [:create, :destroy, :new]
-  before_filter :authorized_user, :only => [:destroy, :edit, :update]
+
 
   def index
     if sort_direction == 'asc'

@@ -33,7 +33,7 @@ legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
 input[type=text], input[type=password], input[type=url], input[type=email],
 input.text, input.title,
 textarea {
-  background-color:#fff;
+  background-color:#FFFFDA;
   border:1px solid #bbb;
   color:#000;
 }

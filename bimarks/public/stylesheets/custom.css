@@ -135,7 +135,8 @@ td.sidebar {
   width: 30%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
+  horizontal-align: right;
+  background: #ADD8E6;
 }
 
 /* Style error messages */

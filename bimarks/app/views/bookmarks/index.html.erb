@@ -8,6 +8,6 @@
     <th><%= sortable "owner", "Submitted by"%></th>
     <th><%= sortable "avg_rating", "Rating"%></th>
     </tr>    <div id="bookmarks"><%= render @bookmarks %></div>  
-  <%= will_paginate @bookmarks %><br /> </table>
+    <%= will_paginate @bookmarks %><br /> </table>
 
 <%= link_to 'New Bookmark', new_bookmark_path %>

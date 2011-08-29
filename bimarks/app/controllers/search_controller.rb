@@ -5,17 +5,13 @@ class SearchController < ApplicationController
 
   def index
     @search_type = params[:search_type]
-    @search_direction = sort_direction
-    @search_column = sort_column
-    
-    
-    
+
     
     if search_type.to_s == 'title'
       if sort_direction == 'asc'
         @bookmarks = Bookmark.search(params[:search]).sort_by(&:"#{sort_column}").paginate(:page => params[:page], :per_page => 15)
       else
-        @bookmarks = Bookmark.search(params[:search]).sort_by(&:"#{sort_column}").paginate(:page => params[:page], :per_page => 15).reverse
+        @bookmarks = Bookmark.search(params[:search]).sort_by(&:"#{sort_column}").reverse.paginate(:page => params[:page], :per_page => 15)
       end
         
     else
