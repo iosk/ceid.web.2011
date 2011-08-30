@@ -253,12 +253,14 @@ td.sidebar {
 	font-weight: bold;}
 
 
-#tagcloud{ background:#303030; width:400px; text-align:center; }
+#tagcloud{ background:#303030; width:300px; text-align:center;
+}
 
 .tag0{ font-size:0em; color:#505050; }
-.tag1{ font-size:0.6em; color:#505050; }
-.tag2{ font-size:0.9em; color:#808080; }
-.tag3{ font-size:1.5em; color:#a0a0a0; }
+.tag1{ font-size:0.9em; color:#505050; }
+.tag2{ font-size:1.5em; color:#808080; }
+.tag3{ font-size:2.5em; color:#a0a0a0; }
+
 
 
 #tagcloud a{ text-decoration:none; }
@@ -294,3 +296,48 @@ table.pretty {
   background-size: 7px 7px
 }
 
+
+
+#tablist{
+padding: 3px 0;
+margin-left: 0;
+margin-bottom: -4.5px;
+margin-top: 0.1em;
+font: bold 12px ;
+font-size: 170%;
+color: #09c;
+}
+
+#tablist li{
+list-style: none;
+display: inline;
+margin: 10px;
+}
+
+#tablist li a{
+padding: 3px 0.5em;
+margin-left: 3px;
+border-bottom: none;
+background: white;
+
+  border-radius: 8px;
+}
+
+#tablist li a:link, #tablist li a:visited{
+color: navy;
+}
+
+#tablist li a.current{
+background: lightyellow;
+}
+
+#tabcontentcontainer{
+width: auto;
+/* Insert Optional Height definition here to give all the content a unified height */
+padding: 5px;
+
+}
+
+.tabcontent{
+display:none;
+}
