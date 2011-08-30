@@ -1,0 +1,7 @@
+<!-- This way we ensure that the users able to see those links will be the creator and the admins only. -->
+<% if signed_in? && (current_user?(@bookmark.user) || current_user.is_admin?) %>
+  <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> | 
+  <%= link_to "Destroy", @bookmark, :method => :delete, :confirm => "Fo' real?", :id => @bookmark.id %> |
+<% end%> 
+
+<%= link_to 'Back', bookmarks_path %>

@@ -13,8 +13,8 @@ gem 'will_paginate', '~> 3.0.pre4'
 #gem 'rails3-jquery-autocomplete'
 
 
-#group :development do
- # gem 'rspec-rails'
+# group :development do
+# gem 'rspec-rails'
 #end
 
 group :test do
