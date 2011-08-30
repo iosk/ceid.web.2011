@@ -39,6 +39,8 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
+	@bookmark.taggings.build
+	@bookmark.tags.build
 
 	respond_to do |format|
 	format.html # new.html.erb
@@ -58,6 +60,7 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.xml
   def create
 	  @bookmark = current_user.bookmarks.build(params[:bookmark])
+#	  @bookmark.tags.build(params[:tags_attributes])
   	# We create a new rating for this bookmark
   	# and we save it.
   	# We assume that every user submitting a new bookmark
@@ -67,8 +70,25 @@ class BookmarksController < ApplicationController
   	@this_rating.bookmark_id = @bookmark
     @this_rating.user = current_user
 	  @this_rating.stars = 5
-	 # @this_rating.save 
+	  @this_rating.save 
+	#  @tag = @bookmark.tags.build(params[:tag_attributes]) unless params[:tag][:name].blank?
 
+    #tagnames = []
+    
+   # @bookmark.title = params[:bookmark][:tags_attributes].class.to_s tagnames.to_s
+  # for tagname in tagnames
+
+   #   tag = Tag.find_or_create_by_name(tagname.to_s)
+   #   @bookmark.tags << tag
+  #    tag.save
+ #  end  
+     #if tag.nil?
+    #  @bookmark.title = "tag was empty"
+     # end
+     
+	 # if @bookmark.tags.empty?
+	#   @bookmark.title = "Tags were empty"
+	# end
 	  respond_to do |format|
 	    if @bookmark.save
 	      flash[:success] = "Bookmark was successfully submitted"

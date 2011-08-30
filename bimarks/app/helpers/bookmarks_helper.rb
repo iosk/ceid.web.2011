@@ -8,4 +8,9 @@ private
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
+  
+    def tag_exists?(tagname)
+    tag = Tag.find_by_name(tagname).nil? 
+    tag ? false : tag
+  end
 end
