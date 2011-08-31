@@ -21,8 +21,9 @@ class BookmarksController < ApplicationController
 	  @bookmark = Bookmark.find(params[:id])
 
 	  if signed_in?
-	    @new_comment = @bookmark.comments.new
-	    @new_comment.user = current_user
+	   @new_comment = Comment.new
+	   # @new_comment = @bookmark.comments.new
+	   # @new_comment.user = current_user
 		  @current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
 		  unless @current_user_rating 
 			  # if current_user has not rated this bookmark yet then create a new rating
