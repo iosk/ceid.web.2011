@@ -16,6 +16,7 @@ Bimarks::Application.routes.draw do
 
   resources :bookmarks
   resources :users
+  resources :comments
 
   resources :tags
 	resources :users, :only => [:create, :destroy, :show, :edit]
