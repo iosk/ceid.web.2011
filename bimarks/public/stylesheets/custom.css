@@ -101,7 +101,7 @@ nav ul li a:hover {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
-}
+position:relative}
 
 
 footer {
@@ -261,11 +261,10 @@ td.sidebar {
 /*#################################################*/
 
 #tagcloud{ background:#303030; width:200px; text-align:center;
-position:fixed;
-right:290px;
-top:380px;}
+position:absolute;
+ top:10px;
+ right:10px;}
 
-.tag0{ font-size:0em; color:#505050; }
 .tag1{ font-size:0.9em; color:#505050; }
 .tag2{ font-size:1.5em; color:#808080; }
 .tag3{ font-size:2.5em; color:#a0a0a0; }
