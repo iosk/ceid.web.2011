@@ -12,6 +12,11 @@
 </p>
 
 <p>
+  <b>Submitted by:</b>
+  <%= link_to @bookmark.user.username,  @bookmark.user %>
+</p>
+
+<p>
   <b>Q review:</b>
   <%= @bookmark.q_review %>
 </p>
@@ -20,6 +25,8 @@
   <b>Submitted:</b>
   <%= time_ago_in_words(@bookmark.created_at) %> ago.
 </p>
+
+
 
 <p>
   <b>Last edited:</b>

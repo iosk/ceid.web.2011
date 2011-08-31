@@ -1,12 +1,11 @@
 <%= hidden_field_tag :direction, params[:direction] %>  
 <%= hidden_field_tag :sort, params[:sort] %>  <%= will_paginate @my_bookmarks %>
 
-<table class = "pretty">
+<table class = "pretty"><caption>Tags submitted by <strong><%= @user.username %></strong></caption>
   <tr>
     <th><%= sortable "title", "Name" %></th>
     <th><%= sortable "url"%></th>
     <th><%= sortable "created_at", "Submitted at"%></th>
-    <th><%= sortable "owner", "Submitted by"%></th>
     <th><%= sortable "avg_rating", "Average Rating"%></th>
   </tr>
 <%  for bookmark in @my_bookmarks %>
@@ -15,7 +14,6 @@
     	<td><%= link_to bookmark.title, bookmark %></td>
     	<td><a href="<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
     	<td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
-    	<td><%= bookmark.user.username %></td>
 	    <td><%= bookmark.avg_rating %></td>
 
 
