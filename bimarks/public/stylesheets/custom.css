@@ -301,30 +301,31 @@ table.pretty {
 #tablist{
 padding: 3px 0;
 margin-left: 0;
-margin-bottom: -4.5px;
+margin-bottom: -3.3px;
 margin-top: 0.1em;
 font: bold 12px ;
-font-size: 170%;
+font-size: 120%;
 color: #09c;
 }
 
 #tablist li{
 list-style: none;
 display: inline;
-margin: 10px;
+
 }
 
 #tablist li a{
 padding: 3px 0.5em;
-margin-left: 3px;
-border-bottom: none;
+margin-left: 0px;
 background: white;
 
-  border-radius: 8px;
+border-bottom: none;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
 }
 
 #tablist li a:link, #tablist li a:visited{
-color: navy;
+color: black;
 }
 
 #tablist li a.current{
@@ -335,9 +336,14 @@ background: lightyellow;
 width: auto;
 /* Insert Optional Height definition here to give all the content a unified height */
 padding: 5px;
-
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
 }
 
 .tabcontent{
 display:none;
 }
+
+
+
