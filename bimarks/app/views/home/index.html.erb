@@ -9,13 +9,13 @@
 
 <br />
 
-<ul id="tablist" >
+<ul id="tablist">
 <li><a href="Mose Recent" onClick="return expandcontent('sc1', this)" theme="#add8e6">Most Recent</a></li>
 <li><a href="Top Rated" onClick="return expandcontent('sc2', this)" theme="#e2f385">Top Rated</a></li>
 <li><a href="Search" onClick="return expandcontent('sc3', this)" theme="#6b746e">Search</a></li>
 </ul>
 
-<DIV id="tabcontentcontainer", class="round">
+<DIV id="tabcontentcontainer">
 
 <div id="sc1" class="tabcontent">
 <table>
@@ -30,7 +30,7 @@
 </table><br />
 </div>
 
-<div id="sc2" class="tabcontent">
+<div id="sc2" class="tabcontent"  >
 <table>
 	  <tr>
 	  <th>Title</th>
@@ -66,8 +66,8 @@
 
 
   <% if signed_in? %>
-	  <p><%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn", 
-	        :class => "inbox-sf-add-btn tip", :method => :get %></p>
+	  <p> <%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn", 
+	        :class => "inbox-sf-add-btn tip", :method => :get%></p>
   <% end %>
   
 
