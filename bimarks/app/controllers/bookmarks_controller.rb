@@ -21,6 +21,8 @@ class BookmarksController < ApplicationController
 	  @bookmark = Bookmark.find(params[:id])
 
 	  if signed_in?
+	    @new_comment = @bookmark.comments.new
+	    @new_comment.user = current_user
 		  @current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
 		  unless @current_user_rating 
 			  # if current_user has not rated this bookmark yet then create a new rating
@@ -71,24 +73,7 @@ class BookmarksController < ApplicationController
     @this_rating.user = current_user
 	  @this_rating.stars = 5
 	  @this_rating.save 
-	#  @tag = @bookmark.tags.build(params[:tag_attributes]) unless params[:tag][:name].blank?
 
-    #tagnames = []
-    
-   # @bookmark.title = params[:bookmark][:tags_attributes].class.to_s tagnames.to_s
-  # for tagname in tagnames
-
-   #   tag = Tag.find_or_create_by_name(tagname.to_s)
-   #   @bookmark.tags << tag
-  #    tag.save
- #  end  
-     #if tag.nil?
-    #  @bookmark.title = "tag was empty"
-     # end
-     
-	 # if @bookmark.tags.empty?
-	#   @bookmark.title = "Tags were empty"
-	# end
 	  respond_to do |format|
 	    if @bookmark.save
 	      flash[:success] = "Bookmark was successfully submitted"

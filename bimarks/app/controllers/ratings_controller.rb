@@ -1,5 +1,7 @@
 class RatingsController < ApplicationController
-  # before_filter :authenticate_user!, :only => [:destroy, :create, :edit]
+
+  before_filter :authenticate, :only => [:create, :destroy]
+  before_filter :authorized_user, :only => [:destroy, :update]
 
 
 # This method creates a rating
