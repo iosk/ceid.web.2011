@@ -1,6 +1,11 @@
 <h1>biMarks, because even the bookmarks can be bi.</h1>
 <p>fuck you i won't do what you tell me</p>
 
+  <% if signed_in? %>
+	  <p> <%= button_to "New bookmark", new_bookmark_path, :method => :get,:class => "buttonto orange" %></p>
+  <% end %>
+  
+  
   <div id="tagcloud", class="round">
     <% for tag in @tag_unique  %>
       <span  class="tag<%=weight(tag)%>"><%= link_to tag.name, tag %></span>
@@ -65,9 +70,7 @@
 </DIV>
 
 
-  <% if signed_in? %>
-	  <p> <%= button_to "New bookmark", new_bookmark_path, :id => "open-contacts-dialog-btn", 
-	        :class => "inbox-sf-add-btn tip", :method => :get%></p>
-  <% end %>
-  
+
+
+
 
