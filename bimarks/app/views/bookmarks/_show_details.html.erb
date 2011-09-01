@@ -1,3 +1,5 @@
+<HTML>
+
 <p>
   <b>Title:</b>
   <%= @bookmark.title %>
@@ -30,13 +32,13 @@
   <b>Tagged as:</b><br/>
   <% for tag in @bookmark.tags %>
     <!-- This here is a fucking hack, I should better try and fix it ;) -->
-    <%= link_to tag.name, tag %>
+    <%= link_to tag.name, tag, :remote => false %>
   <% end %> 
 </p>
 
-<p><% if @bookmark.flagged %>
+<p id="ajax_links"><% if @bookmark.flagged %>
       This bookmark is marked as offensive
    <% else %>
-      <%= link_to "Flag it!", flag_bookmark_path(@bookmark), :method => :post, :remote => "true" %>
+      <%= link_to "Flag it!", flag_bookmark_path(@bookmark), :method => :post, :remote => 'true' %>
    <% end%>
 </p>
