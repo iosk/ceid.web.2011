@@ -8,7 +8,7 @@
   
   <div id="tagcloud", class="round">
     <% for tag in @tag_unique  %>
-      <span  class="tag<%=weight(tag)%>"><%= link_to tag.name, tag %></span>
+      <span  class="tag<%= tag.count>3?3:tag.count%>"><%= link_to tag.name, tag %></span>
     <% end %> 
   </div>
 

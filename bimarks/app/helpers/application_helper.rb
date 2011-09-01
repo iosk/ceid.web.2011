@@ -46,7 +46,7 @@ module ApplicationHelper
 
   
   def weight(tag)
-    Bookmark.search_by_tag(tag.name).index_by {|r| r[:title]}.values.count
+    Tag.find(tag.id).bookmarks.count
   end
   
 

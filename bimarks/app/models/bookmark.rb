@@ -17,15 +17,17 @@ class Bookmark < ActiveRecord::Base
   before_save :check_for_existing_tag
   
   def check_for_existing_tag
-    if self.tags
-      hash = self.tags
-      hash.each{ |k| 
-      new_tag = Tag.find_by_name(k.name) 
-      if new_tag
-        self.tags.delete(k)
-        self.tags << new_tag
+
+    if !(self.tags.empty?)
+      tags = self.tags.clone
+      for tag in tags do
+        existing_tag = Tag.find(:all, :conditions => {:name => tag.name.to_s}).first
+        if !(existing_tag.nil?)
+           self.tags.delete(tag)
+           self.tags << existing_tag
+        end
       end
-      }
+      
     end
   end
   

@@ -42,8 +42,6 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.xml
   def new
 	@bookmark = Bookmark.new
-	@bookmark.taggings.build
-	@bookmark.tags.build
 
 	respond_to do |format|
 	format.html # new.html.erb
