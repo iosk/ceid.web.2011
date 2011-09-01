@@ -378,6 +378,14 @@ display:none;
     background-position: 0 -48px; 
     background-color: #ffa61a;
     }   
+.buttonto.blue:hover {
+    background-position: 0 -48px; 
+    background-color: #427caa;
+    } 
+.buttonto.white:hover {
+    background-position: 0 -48px; 
+    background-color: #e5e5e5;
+    } 
 .buttonto:active {
     background-position: 0 top;
     position: relative;
