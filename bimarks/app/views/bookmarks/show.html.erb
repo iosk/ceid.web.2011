@@ -1,6 +1,8 @@
 <html>
-<p id="notice"><%= notice %></p>
 
+
+<p id="notice"><%= notice %></p>
+<div class="boxleft round">
 <p>
   <b>Title:</b>
   <%= @bookmark.title %>
@@ -21,24 +23,14 @@
   <%= @bookmark.q_review %>
 </p>
 
-<% if !(@bookmark.comments.empty?) %>
-<p>
-  <b>Comments:</b>
-  <%= @bookmark.comments.last.content %>
-</p>
-<% end %>
 <p>
   <b>Submitted:</b>
   <%= time_ago_in_words(@bookmark.created_at) %> ago.
 </p>
-
-
-
 <p>
   <b>Last edited:</b>
   <%= time_ago_in_words(@bookmark.updated_at) %> ago.
 </p>
-<p>
   <b>Tagged as:</b><ul>
   <% for tag in @bookmark.tags %>
     <!-- This here is a fucking hack, I should better try and fix it ;) -->
@@ -46,23 +38,30 @@
   <% end %>
   </ul>
 </p>
+</div>
 
+
+<div class="boxright round">
 <p>
 <ul class="stars floatstars">
 	<li class="yellowstars" style="width: <%= @bookmark.avg_rating * 25 %>px !important;"></li>
         <li class="text"><%= @bookmark.avg_rating %> average from <%= pluralize(@bookmark.count_ratings, "vote") %></li>
     </ul>
 </p>
-
+<% if signed_in? %><p><%= render 'ratings_form' %></p><% end %>
 <!-- Only signed in users can rate a bookmark -->
+</div>
 
 
+</br></br>
+
+<div class="boxcomments round">
+<% if signed_in? %><p><%= render 'comments_form' %></p><% end %>
 
 <% if !(@bookmark.comments.empty?) %>
   <%= render 'show_comments' %>
 <% end %>
-<% if signed_in? %><p><%= render 'comments_form' %></p><% end %>
-<% if signed_in? %><p><%= render 'ratings_form' %></p><% end %>
+</div></br>
 <!-- Only the owner can delete a bookmark -->
 <%= render 'bookmark_footer' %>
 

@@ -418,6 +418,49 @@ top:510px;
 }
 
 
+.boxright {
+position:absolute;
+  width: 30%;
+  padding: 1em;
+  right:50px;
+  top:70px;
+  background: #ADD8E6;
+padding: 5px;
+}
+
+.boxleft {
+position:relative;
+  width: 30%;
+  padding: 1em;
+  height:auto;
+  left:50px;
+  top:30px;
+  background: #ADD8E6;
+}
+
+
+.boxcomments {
+position:inherit;
+  width: 850px;
+  padding: 1em;
+  background: #ADD8E6;
+  left: 50px;
+}
+
+
+.new_comment {
+  background: #ADD8E6;
+}
+
+.Comment_list{ background: #ADD8E6;}
+
+.Comment_list li{ padding: 5px;
+width: 400px;
+background: #ffffda;
+border-style:solid;
+border-width:1px;
+border-color:black;}
+
 
 
 
