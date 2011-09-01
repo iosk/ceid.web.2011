@@ -35,7 +35,7 @@ end
   # GET /bookmarks/1.xml
   def show
 	  @bookmark = Bookmark.find(params[:id])
-
+    @comments = @bookmark.comments.paginate(:page => params[:page], :per_page => 5)
 	  if signed_in?
 	    @new_comment = Comment.new
 		  @current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)

@@ -1,7 +1,7 @@
 <p>
   <b>Comments:</b><br/>
-  <ul class = "Comment_list"  >
-    <% for comment in @bookmark.comments do %>
+  <ul style="list-style: none;" class = "Comment_list"  >
+    <% for comment in @comments do %>
      <p> <li><%= comment.content %></li>
       by: <%= comment.user.username %> | <%= time_ago_in_words(comment.created_at) %> ago |
 
@@ -9,6 +9,7 @@
       <% else %>
       <%= link_to "Flag it!", flag_comment_path(comment), :method => :post, :remote => 'true' %><% end%>     </p>
       <% end %>
+      <%= will_paginate @comments %>
   </ul>
 </p>
 <HTML>
