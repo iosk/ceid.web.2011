@@ -21,9 +21,7 @@ class BookmarksController < ApplicationController
 	  @bookmark = Bookmark.find(params[:id])
 
 	  if signed_in?
-	   @new_comment = Comment.new
-	   # @new_comment = @bookmark.comments.new
-	   # @new_comment.user = current_user
+	    @new_comment = Comment.new
 		  @current_user_rating = @bookmark.ratings.find_by_user_id(current_user.id)
 		  unless @current_user_rating 
 			  # if current_user has not rated this bookmark yet then create a new rating
@@ -35,6 +33,7 @@ class BookmarksController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @bookmark }
+      format.js
     end
   end
 
@@ -52,16 +51,13 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1/edit
   def edit
 	  @bookmark = Bookmark.find(params[:id])
-	  #if @bookmark.tags.empty?
-     # 3.times { tag = @bookmark.tags.build }
-  #  end
   end
 
   # POST /bookmarks
   # POST /bookmarks.xml
   def create
 	  @bookmark = current_user.bookmarks.build(params[:bookmark])
-#	  @bookmark.tags.build(params[:tags_attributes])
+
   	# We create a new rating for this bookmark
   	# and we save it.
   	# We assume that every user submitting a new bookmark

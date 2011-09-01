@@ -2,6 +2,23 @@ class CommentsController < ApplicationController
 
 # before_filter :authenticate_user!, :only => [:destroy, :create, :edit]
 
+def flag
+  @comment = Comment.find(params[:id])
+  @comment.flagged = true
+  @bookmark = @comment.bookmark
+  
+  respond_to do |format|
+    if @comment.save
+      flash[:success] = "You've flagged the shit out of this Comment."
+      format.html {redirect_to(@bookmark) }
+    else
+      flash[:error] = "Something went awfully wrong, please try again"
+      format.html {redirect_to(@bookmark) }
+    end
+  end
+  
+end
+
 
 # This method creates a rating
 def create
@@ -25,7 +42,7 @@ end
 def update
 	
 	@comment = current_user.comments.find(params[:id])
-	@bookmark = Bookmark.find_by_id(@comment.bookmark.id)
+	@bookmark = @comment.bookmark
 
 	respond_to do |format|
 		if @comment.update_attributes(params[:comment])

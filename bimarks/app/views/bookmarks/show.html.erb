@@ -56,14 +56,12 @@
 
 <!-- Only signed in users can rate a bookmark -->
 
-
-
 <% if !(@bookmark.comments.empty?) %>
-  <%= render 'show_comments' %>
+ <div id = "comments"> <%= render 'show_comments' %></div>
 <% end %>
-<% if signed_in? %><p><%= render 'comments_form' %></p><% end %>
+
+<% if signed_in? %>  <%= render 'comments_form' %><% end %>
 <% if signed_in? %><p><%= render 'ratings_form' %></p><% end %>
 <!-- Only the owner can delete a bookmark -->
 <%= render 'bookmark_footer' %>
-
 

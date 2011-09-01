@@ -13,18 +13,6 @@ function remove_field(link) {
   $(link).prev("input[type=hidden]").val("1");
   $(link).closest(".fields").hide();
 }
-
-
-$(".favorite").click(function() {
-  var post_id = $(this).attr('id');
-  $.ajax({
-    type: "POST",
-    url: 'favorites/' + post_id,
-    success: function() {
-      // change image or something
-    }
-  })
-})
          
            
 //########################################################
@@ -182,8 +170,20 @@ $(elem).val(val); // also update the form element
     });   
     
     
-    
-    
+//#########################################################
+//##       Ajax Fuction for Comments                     ##
+//#########################################################   
+        
+    $(function () {  
+      $(' #comments ul a').live('click',   
+        function () {  
+          $.getScript(this.href);  
+          return false;  
+        }  
+      );  
+        
+      // Search form.     
+    });  
     
     
 //########################################################
