@@ -32,18 +32,21 @@ Bimarks::Application.routes.draw do
   resources :comments do
     member do
      post  'flag'
+     get  'flag'
     end
   end  
   
   resources :tags do
     member do
      post  'flag'
+     get  'flag'
     end
   end
   
     resources :bookmarks do
     member do
      post  'flag'
+     get  'flag'
     end
   end
   
