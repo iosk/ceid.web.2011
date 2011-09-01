@@ -1,41 +1,7 @@
 <html>
 <p id="notice"></p>
-<div class="boxleft round">
-<p>
-  <b>Title:</b>
-  <%= @bookmark.title %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <a href="<%= @bookmark.url %>" target="_blank"> <%= @bookmark.url %></a>
-</p>
-
-<p>
-  <b>Submitted by:</b>
-  <%= link_to @bookmark.user.username,  @bookmark.user %>
-</p>
-
-<p>
-  <b>Q review:</b>
-  <%= @bookmark.q_review %>
-</p>
-
-<p>
-  <b>Submitted:</b>
-  <%= time_ago_in_words(@bookmark.created_at) %> ago.
-</p>
-<p>
-  <b>Last edited:</b>
-  <%= time_ago_in_words(@bookmark.updated_at) %> ago.
-</p>
-  <b>Tagged as:</b><ul>
-  <% for tag in @bookmark.tags %>
-    <!-- This here is a fucking hack, I should better try and fix it ;) -->
-    <li><%= link_to tag.name, tag %></li>
-  <% end %>
-  </ul>
-</p>
+<div id = "details" class="boxleft round">
+    <%= render 'show_details' %>
 </div>
 
 

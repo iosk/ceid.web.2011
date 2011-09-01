@@ -2,14 +2,13 @@
 		<%= form_for @new_comment, :bookmark => @bookmark do |f| %>
 		
                 <div id="commentbox">
-                    <ul id="ratingbuttons">
+                  <ul id="ratingbuttons">
                       <% # We add this hidden field to add a bookmark_id %>
                       <%= hidden_field_tag(:bookmark_id, @bookmark.id) %>
                       <%= f.label :content, "Add new Comment:" %><br />
                       <%= f.text_area :content, :rows => 6 %>
-
                     </ul>
-                    <div class="center"><%= submit_tag "Submit!" %></div>
+                  <div class="center"><%= submit_tag "Submit!" %></div>
                 </div>
             <%end %>
 </section>

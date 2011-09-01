@@ -14,6 +14,22 @@ class BookmarksController < ApplicationController
       @bookmarks = Bookmark.all.sort_by(&:"#{sort_column}").reverse.paginate(:page => params[:page], :per_page => 15)
     end
   end
+  
+  def flag
+	@bookmark = Bookmark.find(params[:id])
+  @bookmark.flagged = true
+  
+  respond_to do |format|
+    if @bookmark.save
+      flash[:success] = "You've flagged the shit out of this Bookmark."
+      format.html {redirect_to(@bookmark) }
+    else
+      flash[:error] = "Something went awfully wrong, please try again"
+      format.html {redirect_to(@bookmark) }
+    end
+  end
+  
+end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml

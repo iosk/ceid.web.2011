@@ -34,6 +34,11 @@ Bimarks::Application.routes.draw do
      post  'flag'
     end
   end
+    resources :bookmarks do
+    member do
+     post  'flag'
+    end
+  end
   
   
   get "home/index"

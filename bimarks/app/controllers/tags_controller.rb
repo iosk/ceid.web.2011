@@ -17,6 +17,20 @@ class TagsController < ApplicationController
   end
 
 
-
-
+  
+  def flag
+	  @tag = Tag.find(params[:id])
+    @tag.flagged = true
+  
+    respond_to do |format|
+      if @tag.save
+        flash[:success] = "You've flagged the shit out of this Tag."
+        format.html 
+      else
+        flash[:error] = "Something went awfully wrong, please try again"
+        format.html
+      end
+    end
+  end
+  
 end

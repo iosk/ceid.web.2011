@@ -175,7 +175,7 @@ $(elem).val(val); // also update the form element
 //#########################################################   
         
     $(function () {  
-      $(' #comments ul a').live('click',   
+      $(' #comments ul a, #details a').live('click',   
         function () {  
           $.getScript(this.href);  
           return false;  
