@@ -1,12 +1,13 @@
 <p>
-  <b>Comments:</b><br />
-  <ul >
+  <b>Comments:</b><br/>
+  <ul class = "Comment_list"  >
     <% for comment in @bookmark.comments do %>
-      <li><%= comment.content %></li>
-      by: <%= comment.user.username %> | <%= time_ago_in_words(comment.created_at) %> ago
-      <% if comment.flagged %>| this shit is flagged 
+     <p> <li><%= comment.content %></li>
+      by: <%= comment.user.username %> | <%= time_ago_in_words(comment.created_at) %> ago |
+
+      <% if comment.flagged %> this shit is flagged 
       <% else %>
-      | <%= link_to "Flag it!", flag_comment_path(comment), :method => :post, :remote => 'true' %><% end%>
+      <%= link_to "Flag it!", flag_comment_path(comment), :method => :post, :remote => 'true' %><% end%>     </p>
       <% end %>
   </ul>
 </p>
