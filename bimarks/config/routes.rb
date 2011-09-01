@@ -33,7 +33,14 @@ Bimarks::Application.routes.draw do
     member do
      post  'flag'
     end
+  end  
+  
+  resources :tags do
+    member do
+     post  'flag'
+    end
   end
+  
     resources :bookmarks do
     member do
      post  'flag'

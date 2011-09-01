@@ -1,0 +1,5 @@
+<% if @tag.flagged %>
+    This tag has been marked as offensive/spam by members of our community.
+  <% else %>
+  <%= link_to "Flag it!", flag_tag_path(@tag), :method => :post, :remote => 'true' %>
+  <% end %>

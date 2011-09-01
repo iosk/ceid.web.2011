@@ -1,6 +1,11 @@
 <h1>Listing bookmarks tagged as <%= @tag.name %></h1>
 
 <p>This tag has appeared in <%= pluralize(@count, "biMark") %></p>
+
+<p id ="ajax_links">
+  <%= render 'flag_info' %>
+</p>
+  
 <table>
 	<caption>Most Recent</caption>
 	  <tr>
