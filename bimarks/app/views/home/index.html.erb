@@ -51,20 +51,18 @@
 <div id="sc3" class="tabcontent">
  <%= form_tag 'search', :method => 'get', :id => "bookmarks_search" do %>
   <!-- The radio button submits the search type we want to do -->
-    <div class="form_row">
-    <label for="theme">Search:</label><br />
+    
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :class => "buttonto white small"  %>  
+
+      <% end %>
+        <div class="form_row">
+    <label for="theme"></label>
     <% [ 'tags', 'title' ].each do |search_type| %>
       <%= radio_button_tag 'search_type', search_type, @search_type == search_type %>in
       <%= search_type.humanize %>
     <% end %>
-    </div>
- 
-    <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search" %>
-    </p>
-    
-  <% end %>
+    </div>  
 </div>
 
 </DIV>
