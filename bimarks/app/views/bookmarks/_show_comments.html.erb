@@ -1,0 +1,12 @@
+<p>
+  <b>Comments:</b><br />
+  <ul class = "Comment list" >
+    <% for comment in @bookmark.comments do %>
+      <li><%= comment.content %></li>
+      by: <%= comment.user.username %> | <%= time_ago_in_words(comment.created_at) %> ago
+      | <%= link_to_function "flag it!" %>
+      <% end %>
+  </ul>
+</p>
+
+<HTML>

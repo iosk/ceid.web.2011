@@ -13,6 +13,20 @@ function remove_field(link) {
   $(link).prev("input[type=hidden]").val("1");
   $(link).closest(".fields").hide();
 }
+
+
+$(".favorite").click(function() {
+  var post_id = $(this).attr('id');
+  $.ajax({
+    type: "POST",
+    url: 'favorites/' + post_id,
+    success: function() {
+      // change image or something
+    }
+  })
+})
+         
+           
 //########################################################
 //##       Add Tag links                   	            ##
 //########################################################
@@ -280,9 +294,9 @@ return returnvalue;
 }
 
 function savetabstate(){
-var cookiename=(persisttype=="sitewide")? "tabcontent" : window.location.pathname
-var cookievalue=(persisttype=="sitewide")? tabsourceindex+"|"+previoustab+";path=/" : tabsourceindex+"|"+previoustab
-document.cookie=cookiename+"="+cookievalue
+  var cookiename=(persisttype=="sitewide")? "tabcontent" : window.location.pathname
+  var cookievalue=(persisttype=="sitewide")? tabsourceindex+"|"+previoustab+";path=/" :     tabsourceindex+"|"+previoustab
+  document.cookie=cookiename+"="+cookievalue
 }
 
 window.onunload=savetabstate
