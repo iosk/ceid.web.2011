@@ -1,0 +1,27 @@
+This is the admin page
+
+<HTML>
+
+
+<ul id="tablist">
+<li><a href="Flagged_Bookmarks" onClick="return expandcontent('flagged_bookmarks', this)" theme="#add8e6">Flagged Bookmarks</a></li>
+<li><a href="Flagged_Tags" onClick="return expandcontent('flagged_tags', this)" theme="#e2f385">Flagged Tags</a></li>
+<li><a href="Flagged_Comments" onClick="return expandcontent('flagged_comments', this)" theme="#6b746e">Flagged Comments</a></li>
+</ul>
+
+<div id="tabcontentcontainer">
+
+<div id="flagged_bookmarks" class="tabcontent">
+	 	<%= render 'flagged_bookmarks' %>
+</div>
+
+<div id="flagged_tags" class="tabcontent">
+
+<%= render 'flagged_tags' %>
+</div>
+
+<div id="flagged_comments" class="tabcontent">
+	 	<%= render 'flagged_comments' %>
+</div>
+
+</div>

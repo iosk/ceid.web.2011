@@ -16,8 +16,22 @@ def flag
       format.html {redirect_to(@bookmark) }
     end
   end
-  
 end
+
+  def unflag
+    @comment = Comment.find(params[:id])
+    @comment.flagged = false
+  
+    respond_to do |format|
+      if @comment.save
+        flash[:success] = "You've flagged the shit out of this Comment."
+        format.html {redirect_to(@comment) }
+      else
+        flash[:error] = "Something went awfully wrong, please try again"
+        format.html {redirect_to(@comment) }
+      end
+    end
+  end
 
 
 # This method creates a rating

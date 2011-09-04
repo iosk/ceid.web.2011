@@ -6,7 +6,7 @@
     	<td><%= link_to bookmark.user.username, bookmark.user %></td>
 	    <td><%= bookmark.avg_rating %> from <%= pluralize(bookmark.count_ratings,"vote") %></td>
       <% if signed_in? && (current_user?(bookmark.user)|| current_user.is_admin?) %>
-          <td>
+          <td id="">
           <%= link_to "Destroy", bookmark, :method => :delete,
                                      :confirm => "Fo' real?",
                                      :id => bookmark.id %>

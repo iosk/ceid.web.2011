@@ -154,7 +154,7 @@ $(elem).val(val); // also update the form element
     
     $(function () {  
       // Sorting and pagination links.  
-      $(' #my_bookmarks th a,  #bookmarks th a, #bookmarks .pagination a, #my_bookmarks .pagination a').live('click',   
+      $(' #my_bookmarks th a,  #bookmarks th a, #bookmarks .pagination a, #my_bookmarks .pagination a, #flagged_bookmarks th a, #flagged_bookmarks .pagination a, #flagged_comments .pagination a, #flagged_tags .pagination a').live('click',   
         function () {  
           $.getScript(this.href);  
           return false;  
@@ -184,6 +184,15 @@ $(elem).val(val); // also update the form element
         
       // Search form.     
     });  
+    
+
+
+//#########################################################
+//##       Ajax Delete Links                             ##
+//#########################################################   
+
+        
+ 
     
     
 //########################################################

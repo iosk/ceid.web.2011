@@ -1,0 +1,28 @@
+<!-- This is a partial for creating the short view of flagged tags - for using in admin page !-->
+<table>
+	  <tr>
+	  <th>Title</th>
+	  <th>Last Submission at</th>
+		<th>Unflag</th>
+		<th>Delete</th>
+	  </tr>
+
+<% for tag in @flagged_tags %>      
+      
+      <tr class="tag">
+    	<td><%= link_to tag.name, tag %></td>
+    	<td><%= time_ago_in_words(tag.created_at) %> ago</td>
+
+          
+      <td id="ajax_links"><%= link_to "Remove flag", unflag_tag_path(tag), :method => :post, :remote => 'true' %></td>      
+      <td id="delete_links"><%= link_to "Delete this motherfucker", tag, :method => :delete,
+
+                                     :remote => 'true',
+                                     :id => tag.id %></td>
+   
+   
+         <%end %>
+</tr>
+</table><%= will_paginate @flagged_tags %>
+	  
+<br />

@@ -28,8 +28,22 @@ class BookmarksController < ApplicationController
       format.html {redirect_to(@bookmark) }
     end
   end
-  
 end
+
+  def unflag
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.flagged = false
+  
+    respond_to do |format|
+      if @bookmark.save
+        flash[:success] = "You've flagged the shit out of this Bookmark."
+        format.html {redirect_to(@bookmark) }
+      else
+        flash[:error] = "Something went awfully wrong, please try again"
+        format.html {redirect_to(@bookmark) }
+      end
+    end
+  end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.xml
@@ -121,8 +135,9 @@ end
 	@bookmark.destroy
 	flash[:notice] = "Bookmark was successfully deleted"
 	respond_to do |format|    
-	 	format.html {redirect_to(current_user)}
+	 	format.html { redirect_to(current_user)}
 		format.xml  { head :ok }
+  
     end
   end
 
@@ -136,7 +151,8 @@ end
 
   def authorized_user
     (@bookmark = current_user.bookmarks.find_by_id(params[:id])
-    redirect_to(root_path, :notice => 'WTF are you trying to do there dawg?! ~ The site\'s secure, got that?') if @bookmark.nil?)     unless current_user.is_admin?
+    redirect_to(root_path, :notice => 'WTF are you trying to do there dawg?! ~ The site\'s secure, got that?') if @bookmark.nil?)   unless current_user.is_admin? 
+    false
   end
   # We define these two new methods as to avoid sql injection problems
 # by users who tweak the url address. 

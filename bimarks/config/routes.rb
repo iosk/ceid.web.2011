@@ -8,6 +8,7 @@ Bimarks::Application.routes.draw do
  	 match '/contact', :to => 'pages#contact'
  	 match '/about',   :to => 'pages#about'
  	 match '/help',    :to => 'pages#help'
+ 	 match '/admin',   :to => 'pages#admin'
   
  	 match '/login',  :to => 'sessions#new'
  	 match '/logout', :to => 'sessions#destroy'
@@ -28,25 +29,30 @@ Bimarks::Application.routes.draw do
   resources :search
 	resources :bookmarks, :only => [:create, :destroy, :show, :edit]
 
-
   resources :comments do
     member do
-     post  'flag'
+     post 'flag'
      get  'flag'
+     post 'unflag'
+     get  'unflag'
     end
   end  
   
   resources :tags do
     member do
-     post  'flag'
+     post 'flag'
      get  'flag'
+     post 'unflag'
+     get  'unflag'
     end
   end
   
     resources :bookmarks do
     member do
-     post  'flag'
+     post 'flag'
      get  'flag'
+     post 'unflag'
+     get  'unflag'
     end
   end
   

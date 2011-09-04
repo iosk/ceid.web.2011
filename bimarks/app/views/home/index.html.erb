@@ -1,18 +1,18 @@
 <h1>biMarks, because even the bookmarks can be bi.</h1>
 <p>fuck you i won't do what you tell me</p>
 
+  <p>
   <% if signed_in? %>
-	  <p> <%= button_to "New bookmark", new_bookmark_path, :method => :get,:class => "buttonto orange" %></p>
+	  <%= button_to "New bookmark", new_bookmark_path, :method => :get,:class => "buttonto orange" %>
+  <% else %>
+    <%= link_to "Register now to submit a new bookmark", register_path %>
   <% end %>
   
-  
-  <div id="tagcloud", class="round">
+  <div id="tagcloud" class="round">
     <% for tag in @tag_unique  %>
       <span  class="tag<%= tag.count>3?3:tag.count%>"><%= link_to tag.name, tag %></span>
     <% end %> 
   </div>
-
-</br></br></br>
 
 <ul id="tablist">
 <li><a href="Mose Recent" onClick="return expandcontent('sc1', this)" theme="#add8e6">Most Recent</a></li>

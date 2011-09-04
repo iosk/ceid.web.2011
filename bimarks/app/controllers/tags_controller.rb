@@ -34,4 +34,31 @@ class TagsController < ApplicationController
     end
   end
   
+  def unflag
+    @tag = Tag.find(params[:id])
+    @tag.flagged = false
+  
+    respond_to do |format|
+      if @tag.save
+        flash[:success] = "You've flagged the shit out of this Tag."
+        format.html {redirect_to(@tag) }
+      else
+        flash[:error] = "Something went awfully wrong, please try again"
+        format.html {redirect_to(@tag) }
+      end
+    end
+  end
+  
+  # DELETE /bookmarks/1
+  # DELETE /bookmarks/1.xml
+  def destroy
+	@tag = Tag.find(params[:id])
+	@tag.destroy
+	flash[:notice] = "Bookmark was successfully deleted"
+	respond_to do |format|    
+	 	format.html {redirect_back_or current_user}
+		format.xml  { head :ok }
+    end
+  end
+  
 end

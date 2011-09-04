@@ -1,0 +1,26 @@
+<!-- This is a partial for creating the short view of flagged comments - for using in admin page !-->
+<table>
+  <tr>
+	  <th>Title</th>
+		<th>Submitted at</th>
+		<th>Submitted by</th>
+	</tr>
+
+
+  <% for comment in @flagged_comments %>      
+      
+    <tr class="comment">
+      <td><%= link_to comment.content, comment %></td>
+    	<td><%= time_ago_in_words(comment.created_at) %> ago</td>
+    	<td><%= link_to comment.user.username, comment.user %></td>
+      <td id="ajax_links"><%= link_to "Remove flag", unflag_comment_path(comment), :method => :post, :remote => 'true' %></td>      
+      <td id="delete_links"><%= link_to "Delete this motherfucker", comment, :method => :delete,
+                                     :confirm => "Fo' real?",
+                                     :remote => 'true',
+                                     :id => comment.id %></td>
+  <%end %>
+  </tr>
+</table>
+<%= will_paginate @flagged_comments %>
+<br />
+

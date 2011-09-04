@@ -1,0 +1,26 @@
+<!-- This is a partial for creating the short view of flagged bookmarks - for using in admin page !-->
+<table>
+  <tr>
+	  <th>Title</th>
+	  <th>Url</th>
+		<th>Submitted at</th>
+		<th>Submitted by</th>
+    <th>
+	</tr>
+	<% for bookmark in @flagged_bookmarks %>          
+    <tr class="bookmark">
+      <td><%= link_to bookmark.title, bookmark %></td>
+   	  <td><a href="<%=bookmark.url %>" target="_blank"><%= bookmark.url %></a></td>
+    	<td><%= time_ago_in_words(bookmark.created_at) %> ago</td>
+    	<td><%= link_to bookmark.user.username, bookmark.user %></td>    
+      <td id="ajax_links"><%= link_to "Remove flag", unflag_bookmark_path(bookmark), :method => :post, :remote => 'true' %></td>      
+      <td id= "delete_links" class ="deleted"><%= link_to "Delete this motherfucker", bookmark, :method => :delete,
+                                     :confirm => "Fo' real?",
+                                     :remote => 'true',
+                                     :id => bookmark.id %></td>
+  <%end %>
+  </tr>
+</table>
+<%= will_paginate @flagged_bookmarks %>
+<br />
+
