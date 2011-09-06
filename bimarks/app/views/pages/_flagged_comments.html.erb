@@ -13,8 +13,8 @@
       <td><%= link_to comment.content, comment %></td>
     	<td><%= time_ago_in_words(comment.created_at) %> ago</td>
     	<td><%= link_to comment.user.username, comment.user %></td>
-      <td id="ajax_links"><%= link_to "Remove flag", unflag_comment_path(comment), :method => :post, :remote => 'true' %></td>      
-      <td id="delete_links"><%= link_to "Delete this motherfucker", comment, :method => :delete,
+      <td id="remove_tr"><%= link_to "Remove flag", unflag_comment_path(comment), :method => :post, :remote => 'true' %></td>      
+      <td id="remove_tr"><%= link_to "Delete this motherfucker", comment, :method => :delete,
                                      :confirm => "Fo' real?",
                                      :remote => 'true',
                                      :id => comment.id %></td>

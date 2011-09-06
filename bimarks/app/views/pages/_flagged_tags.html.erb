@@ -14,9 +14,9 @@
     	<td><%= time_ago_in_words(tag.created_at) %> ago</td>
 
           
-      <td id="ajax_links"><%= link_to "Remove flag", unflag_tag_path(tag), :method => :post, :remote => 'true' %></td>      
-      <td id="delete_links"><%= link_to "Delete this motherfucker", tag, :method => :delete,
-
+      <td id="remove_tr"><%= link_to "Remove flag", unflag_tag_path(tag), :method => :post, :remote => 'true' %></td>      
+      <td id="remove_tr"><%= link_to "Delete this motherfucker", tag, :method => :delete,
+                                     :confirm => "Fo' real?",
                                      :remote => 'true',
                                      :id => tag.id %></td>
    
