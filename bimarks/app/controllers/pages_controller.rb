@@ -30,17 +30,7 @@ class PagesController < ApplicationController
     @flagged_bookmarks = Bookmark.find(:all, :conditions => { :flagged => true}).paginate(:page => params[:page], :per_page => 5)
     @flagged_tags = Tag.find(:all, :conditions => { :flagged => true}).paginate(:page => params[:page], :per_page => 5)
     @flagged_comments = Comment.find(:all, :conditions => { :flagged => true}).paginate(:page => params[:page], :per_page => 5)
-<<<<<<< HEAD
 
-=======
-    
-   respond_to do |format|
-      format.html 
-      format.xml 
-      format.js
-    end
-    
->>>>>>> ddba90ccd0d8b0ce798245d873af547368e3a1b6
   end
 
   def admin_user_only

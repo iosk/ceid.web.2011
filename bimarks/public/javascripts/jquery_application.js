@@ -191,7 +191,7 @@ $(elem).val(val); // also update the form element
 //#########################################################   
 
         $(function () {  
-      $(' #comments ul a, #remove_tr a').live('click',   
+      $('#remove_tr a').live('click',   
         function (event) {  
           $(this).parent().parent().fadeOut('slow', function() {$(this).remove();});;  
           return false;  
