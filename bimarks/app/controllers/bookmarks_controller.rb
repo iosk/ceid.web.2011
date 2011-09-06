@@ -137,7 +137,7 @@ end
 	respond_to do |format|    
 	 	format.html { redirect_to(current_user)}
 		format.xml  { head :ok }
-  
+		fortmat.js {}
     end
   end
 

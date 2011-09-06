@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   # A user has many bookmarks, and when the user is destroyed so are his/her bookmarks
   has_many :bookmarks, :dependent => :destroy
+  has_many :bookmarkings, :dependent => :destroy
   has_many :ratings, :dependent => :destroy
   has_many :comments, :dependent => :destroy
   attr_accessible :username, :email, :password, :password_confirmation
