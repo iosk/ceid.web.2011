@@ -7,6 +7,7 @@ class Bookmark < ActiveRecord::Base
  # default_scope :order => 'bookmarks.created_at DESC'
 
   # Associations
+  has_many :bookmarkings, :dependent => :destroy  
   has_many :ratings, :dependent => :destroy
   has_many :taggings, :dependent => :destroy 
   has_many :tags, :through => :taggings, :foreign_key => :tag_id
@@ -15,9 +16,17 @@ class Bookmark < ActiveRecord::Base
   accepts_nested_attributes_for :tags, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true, :update_only => true
   
   before_save :check_for_existing_tag
+  after_save :create_bookmarking
+  
+  def create_bookmarking
+    bookmarking = Bookmarking.new
+    bookmarking.user = self.user
+    bookmarking.bookmark = self
+    bookmarking.save
+  end
+
   
   def check_for_existing_tag
-
     if !(self.tags.empty?)
       tags = self.tags.clone
       for tag in tags do
