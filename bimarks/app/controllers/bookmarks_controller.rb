@@ -17,8 +17,7 @@ class BookmarksController < ApplicationController
   
   def flag
 	@bookmark = Bookmark.find(params[:id])
-  @bookmark.flagged = true
-  
+  @bookmark.flagged = true  
   respond_to do |format|
     if @bookmark.save
       flash[:success] = "You've flagged the shit out of this Bookmark."
@@ -105,8 +104,8 @@ end
         format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark,:action=>"rss", :status => :created, :location => @bookmark  }
       else
-	      flash[:error] = "Bookmark was not submitted :~("
-        format.html { render :action => "new" }
+	      flash[:error] = "The Bookmark already existed"
+        format.html { redirect_to(@bookmark) }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
       end
     end
@@ -137,7 +136,7 @@ end
 	respond_to do |format|    
 	 	format.html { redirect_to(current_user)}
 		format.xml  { head :ok }
-		fortmat.js {}
+		format.js {}
     end
   end
 

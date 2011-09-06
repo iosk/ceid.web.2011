@@ -1,5 +1,10 @@
 module BookmarksHelper
 
+  def create_bookmarking
+    bookmarking = Bookmarking.new(:user_id => self.user.id, :bookmark_id => self.id)
+    bookmarking.save
+  end
+
 private
 	def sort_column
     (Bookmark.column_names.include?(params[:sort]) || ["owner", "avg_rating"].include?(params[:sort]) )? params[:sort] : "title"

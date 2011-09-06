@@ -16,15 +16,13 @@ class Bookmark < ActiveRecord::Base
   accepts_nested_attributes_for :tags, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true, :update_only => true
   
   before_save :check_for_existing_tag
-  after_save :create_bookmarking
+  before_save :create_bookmarking
+  
   
   def create_bookmarking
-    bookmarking = Bookmarking.new
-    bookmarking.user = self.user
-    bookmarking.bookmark = self
+    bookmarking = Bookmarking.new(:user_id => self.user.id, :bookmark_id => self.id)
     bookmarking.save
   end
-
   
   def check_for_existing_tag
     if !(self.tags.empty?)
