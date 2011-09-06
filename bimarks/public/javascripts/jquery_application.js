@@ -181,17 +181,25 @@ $(elem).val(val); // also update the form element
           return false;  
         }  
       );  
-        
-      // Search form.     
+           
     });  
     
-
+    
 
 //#########################################################
-//##       Ajax Delete Links                             ##
+//##       Ajax Remove_tr                                ##
 //#########################################################   
 
-        
+        $(function () {  
+      $(' #comments ul a, #remove_tr a').live('click',   
+        function (event) {  
+          $(this).parent().parent().fadeOut('slow', function() {$(this).remove();});;  
+          return false;  
+        }  
+      );  
+         
+    });  
+    
  
     
     
